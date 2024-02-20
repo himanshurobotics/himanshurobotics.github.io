@@ -2,14 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a> Kinematics, Dynamics and Control expert for Serial, Parallel and Hybrid robots
+subtitle: <a href='#'>Kinematics, Dynamics and Control expert for Serial, Parallel and Hybrid robots</a> 
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Senior Research Fellow and pursuing Ph.D. in Robotics at Indian Institute of Technology Dhanbad</p>
+    <p>Ph.D. in Robotics</p>
+    <p>Senior Research Fellow</p>
+    <p>Indian Institute of Technology Dhanbad</p>
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts

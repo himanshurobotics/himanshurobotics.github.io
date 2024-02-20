@@ -64,35 +64,35 @@
   ],
   "education": [
     {
-      "institution": "Indian Institute of Technology",
-      "location": "Dhanbad, Jharkhand, India",
+      "institution": "Indian Institute of Technology, Dhanbad",
+      "location": "Jharkhand, India",
       "url": "https://www.iitism.ac.in/",
       "area": "Robotics Engineer",
       "studyType": "Doctor of Philosophy (Ph.D.)",
-      "startDate": "2021-08-16",
+      "startDate": "2021",
       "endDate": "",
       "score": "",
       "courses": ["Robotics", "Compliant control", "Parallel robots", "Dynamics", "Kinematics"]
     },
     {
       "institution": "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
-      "location": "New Delhi",
+      "location": "New Delhi, India ",
       "url": "http://nsut.ac.in/",
       "area": "Mechatronics Engineering",
       "studyType": "Master of Technology (M.Tech.)",
-      "startDate": "2019-08-01",
-      "endDate": "2021-07-31",
+      "startDate": "2019",
+      "endDate": "2021",
       "score": "",
       "courses": ["Robotics", "Serial robots", "Dynamics", "Kinematics", "Fractional order fuzzy control", "Artificial Intelligence"]
     },
     {
-      "institution": "The LNM Institute of Information Technology",
-      "location": "Jaipur, Rajasthan, India",
+      "institution": "The LNM Institute of Information Technology, Jaipur",
+      "location": "Rajasthan, India",
       "url": "https://lnmiit.ac.in/",
       "area": "Mechanical Engineering with specialization in Mechatronics",
       "studyType": "Bachelor of Technology (B.Tech.)",
-      "startDate": "2014-07-22",
-      "endDate": "2018-06-22",
+      "startDate": "2014",
+      "endDate": "2018",
       "score": "",
       "courses": ["Mechatronics", "Control", "Embedded systems", "Automobile"]
     }
