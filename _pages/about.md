@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>Ph.D. in Robotics</p>
     <p>Senior Research Fellow</p>
-    <p>Indian Institute of Technology Dhanbad</p>
+    <p>IIT Dhanbad</p>
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
