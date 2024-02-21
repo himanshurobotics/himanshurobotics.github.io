@@ -6,7 +6,7 @@ title: Himanshu Varshney # the website title (if blank, full name will be used i
 first_name: Himanshu
 middle_name: 
 last_name: Varshney
-email: hvarshney[period]iitdhn[test your common sense here for gmail]
+email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Kinematics, Dynamics and Control expert for Serial, Parallel and Hybrid robots.
 footer_text:
