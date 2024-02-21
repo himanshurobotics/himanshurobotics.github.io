@@ -224,7 +224,7 @@
       "url": ""
     },
     {
-      "name": "Conversion of bonventional braking system to ABS in a car",
+      "name": "Conversion of conventional braking system to ABS in a car",
       "summary": "Designed and fabricated the required mountings and controlling elements to convert the conventional braking system (drum brakes) to ABS. \nInterfaced the Arduino Mega to send, receive and process all the signals according to requirements while braking.",
       "highlights": ["Automotive electronics", "Mechatronics"],
       "startDate": "2017-08-01",
