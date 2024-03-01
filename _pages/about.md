@@ -1,29 +1,26 @@
 ---
 layout: about
-title: About me
+title: about
 permalink: /
-subtitle: <a href='#'>Kinematics, Dynamics and Control expert for Serial, Parallel and Hybrid robots</a>
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: prof_pic.png
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Senior Research Fellow | </p>
-    <p>Ph.D. in Robotics | </p>
-    <p>IIT Dhanbad</p>
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
 
-news: false # includes a list of news items
-latest_posts: false # includes a list of the newest posts
+news: true # includes a list of news items
+latest_posts: true # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I'm not just your average bolt-tightener. I'm a maestro of motion, coaxing robots to pirouette with precision, solve Rubik's Cubes with robotic finesse, and even whip up a mean latte (if they had hands, of course).
 
-Forget clunky contraptions; my robots are graceful gliders, whether they're serial, parallel, or the lovechild of both. Kinematics, dynamics, compliant control - they're my symphony, and I conduct with flawless precision.
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-So, unleash your wildest robotic dreams. Need a ballet-dancing bot to impress the judges? A Rubik's-solving automaton to dominate game nights? Or maybe just a coffee-brewing companion to fuel your late-night coding sessions? Look no further.
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-If I'm in the game, your robots won't just be functional, they'll be showstoppers. Plus, I come with a lifetime guarantee against robot uprisings. (Mostly.)
-
-P.S. I also excel at making robots not take over the world. But that's another story for another day.
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
