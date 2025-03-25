@@ -9,9 +9,9 @@ profile:
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Senior Research Fellow | </p>
-    <p>Ph.D. in Robotics | </p>
-    <p>IIT Dhanbad</p>
+    <p> Senior Research Fellow | </p>
+    <p> Ph.D. in Robotics | </p>
+    <p> IIT Dhanbad </p>
 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
@@ -26,4 +26,4 @@ So, unleash your wildest robotic dreams. Need a ballet-dancing bot to impress th
 
 If I'm in the game, your robots won't just be functional, they'll be showstoppers. Plus, I come with a lifetime guarantee against robot uprisings. (Mostly.)
 
-P.S. I also excel at making robots not take over the world. But that's another story for another day.
+P.S. I also excel at making robots not to take over the world. But that's another story for another day.
