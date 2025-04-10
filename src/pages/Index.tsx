@@ -10,24 +10,21 @@ import Projects from '@/components/Projects';
 import Awards from '@/components/Awards';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import { ThemeProvider } from '@/context/ThemeProvider';
 
 const Index = () => {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-        <Navbar />
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Awards />
-        <Contact />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <Navbar />
+      <Hero />
+      <About />
+      <Education />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Awards />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 
