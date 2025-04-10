@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,10 +15,10 @@ const Hero = () => {
               Himanshu Varshney
             </h1>
             <p className="text-xl text-gray-600">
-              Ph.D. Research Scholar in Robotics & Mechatronics
+              Robotics Engineer | Ph.D. Research Scholar
             </p>
             <p className="text-gray-600 max-w-lg">
-              Specializing in Cobots, Industrial Robots, Mechatronics, Control Systems and Automation with a focus on Physical Human-Robot Interaction (pHRI).
+              Research interests and expertise spans kinematics, dynamics and complaint control of serial, parallel and hybrid robots with applications in the fields of exoskeletons, humanoids, rehabilitation and industrial automation.
             </p>
             <div className="flex space-x-4">
               <Button className="bg-tech-blue hover:bg-tech-darkblue">
@@ -31,7 +32,7 @@ const Hero = () => {
             </div>
             <div className="flex space-x-4 pt-4">
               <a 
-                href="#" 
+                href="https://himanshurobotics.github.io/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-tech-blue transition-colors"
@@ -47,7 +48,7 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
-                href="mailto:example@example.com" 
+                href="mailto:hvarshneyperiodittdhn[test your common sense here for gmail]" 
                 className="text-gray-600 hover:text-tech-blue transition-colors"
               >
                 <Mail className="h-6 w-6" />

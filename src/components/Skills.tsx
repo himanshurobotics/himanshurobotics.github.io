@@ -1,6 +1,14 @@
 
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Code, 
+  Cpu, 
+  PenTool, 
+  Gauge,
+  Settings,
+  BookOpen
+} from 'lucide-react';
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -8,181 +16,170 @@ const Skills = () => {
   const skillCategories = [
     {
       id: "all",
-      name: "All Skills"
+      name: "All Skills",
+      icon: <Settings className="w-5 h-5" />
     },
     {
-      id: "industry",
-      name: "Industry Knowledge"
+      id: "programming",
+      name: "Programming",
+      icon: <Code className="w-5 h-5" />
     },
     {
-      id: "tools",
-      name: "Tools & Technologies"
+      id: "design",
+      name: "Design & Modeling",
+      icon: <PenTool className="w-5 h-5" />
+    },
+    {
+      id: "control",
+      name: "Control & Automation",
+      icon: <Gauge className="w-5 h-5" />
+    },
+    {
+      id: "languages",
+      name: "Languages",
+      icon: <BookOpen className="w-5 h-5" />
     }
   ];
 
   const skills = [
-    {
-      name: "Robotics",
-      category: "industry",
-      level: 95,
-      institute: "Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Mechatronics",
-      category: "industry",
-      level: 90,
-      institute: "Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Beckhoff TwinCAT",
-      category: "tools",
-      level: 85,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
+    // Programming Skills
     {
       name: "Python",
-      category: "tools",
+      category: "programming",
       level: 88,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Industrial Robotics",
-      category: "industry",
-      level: 92,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Compliant Parallel Robots",
-      category: "industry",
-      level: 90,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
+      institute: "Senior Research Fellow at IIT Dhanbad"
     },
     {
       name: "C++",
-      category: "tools",
-      level: 85,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
+      category: "programming",
+      level: 85
     },
     {
-      name: "C (Programming Language)",
-      category: "tools",
+      name: "C",
+      category: "programming",
       level: 83
     },
     {
-      name: "Python (Programming Language)",
-      category: "tools",
-      level: 88
+      name: "MATLAB",
+      category: "programming",
+      level: 90
     },
     {
-      name: "PLC Programming",
-      category: "tools",
+      name: "AI/ML",
+      category: "programming",
       level: 80
     },
     {
-      name: "Microcontrollers",
-      category: "tools",
-      level: 85
+      name: "Embedded-C",
+      category: "programming",
+      level: 80
     },
     {
-      name: "Automation",
-      category: "industry",
-      level: 87,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Instrumentation",
-      category: "industry",
-      level: 85
-    },
-    {
-      name: "SolidWorks",
-      category: "tools",
-      level: 82,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "LabVIEW",
-      category: "tools",
-      level: 75
-    },
-    {
-      name: "Matlab",
-      category: "tools",
-      level: 90,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "Simulink",
-      category: "tools",
-      level: 85,
-      institute: "Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "ANSYS",
-      category: "tools",
-      level: 75
-    },
-    {
-      name: "Assembly Language",
-      category: "tools",
-      level: 70,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "AutoCAD",
-      category: "tools",
-      level: 78
-    },
-    {
-      name: "Java",
-      category: "tools",
+      name: "Assembly",
+      category: "programming",
       level: 70
     },
+    
+    // Design & Modeling Skills
     {
-      name: "NI LabVIEW",
-      category: "tools",
-      level: 75
-    },
-    {
-      name: "Embedded C",
-      category: "tools",
-      level: 80,
-      institute: "Senior Research Fellow at Indian Institute of Technology (Indian School of Mines), Dhanbad"
-    },
-    {
-      name: "AutoCAD M",
-      category: "tools",
-      level: 75
-    },
-    {
-      name: "MSC Adams",
-      category: "tools",
-      level: 80
-    },
-    {
-      name: "ANSYS-APDL",
-      category: "tools",
-      level: 75
-    },
-    {
-      name: "Embedded electronics programming",
-      category: "tools",
+      name: "SolidWorks",
+      category: "design",
       level: 82
     },
     {
-      name: "Proteus",
-      category: "tools",
+      name: "MSC Adams",
+      category: "design",
+      level: 80
+    },
+    {
+      name: "AutoCAD",
+      category: "design",
       level: 78
     },
     {
-      name: "MPLAB",
-      category: "tools",
-      level: 72
+      name: "ANSYS-APDL",
+      category: "design",
+      level: 75
+    },
+    
+    // Control & Automation Skills
+    {
+      name: "Robotics",
+      category: "control",
+      level: 95,
+      institute: "IIT Dhanbad"
     },
     {
-      name: "Vehicle Dynamics",
-      category: "industry",
+      name: "Mechatronics",
+      category: "control",
+      level: 90
+    },
+    {
+      name: "Beckhoff TwinCAT",
+      category: "control",
+      level: 85
+    },
+    {
+      name: "Allen-Bradley PLC",
+      category: "control",
+      level: 80
+    },
+    {
+      name: "Siemens PLC",
+      category: "control",
+      level: 82
+    },
+    {
+      name: "NI LabVIEW",
+      category: "control",
       level: 75
+    },
+    {
+      name: "Parallel Robots",
+      category: "control",
+      level: 92
+    },
+    {
+      name: "Serial Robots",
+      category: "control",
+      level: 88
+    },
+    {
+      name: "Kinematics",
+      category: "control",
+      level: 90
+    },
+    {
+      name: "Dynamics",
+      category: "control",
+      level: 88
+    },
+    {
+      name: "Control Systems",
+      category: "control",
+      level: 85
+    },
+    {
+      name: "Compliant Control",
+      category: "control",
+      level: 90
+    },
+    {
+      name: "Automation",
+      category: "control",
+      level: 87
+    },
+    
+    // Languages
+    {
+      name: "Hindi (Native)",
+      category: "languages",
+      level: 100
+    },
+    {
+      name: "English (Fluent)",
+      category: "languages",
+      level: 90
     }
   ];
 
@@ -197,14 +194,15 @@ const Skills = () => {
         
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8 overflow-x-auto">
               <TabsList className="bg-gray-200">
                 {skillCategories.map(category => (
                   <TabsTrigger 
                     key={category.id} 
                     value={category.id}
-                    className="data-[state=active]:bg-tech-blue data-[state=active]:text-white"
+                    className="data-[state=active]:bg-tech-blue data-[state=active]:text-white flex items-center gap-2"
                   >
+                    {category.icon}
                     {category.name}
                   </TabsTrigger>
                 ))}

@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Code, Database, Cpu, Gauge, Server, Lightbulb } from 'lucide-react';
+import { Code, Database, Cpu, Gauge, Server, Lightbulb, Globe } from 'lucide-react';
 
 const About = () => {
   const skills = [
     { 
       title: "Programming", 
       icon: <Code className="w-10 h-10 text-tech-blue" />,
-      desc: "C/C++, Java, Python, PLC Programming" 
+      desc: "Python, C++, C, MATLAB, AI/ML, Embedded-C, Assembly" 
     },
     { 
       title: "Software", 
@@ -22,7 +22,7 @@ const About = () => {
     { 
       title: "Control Systems", 
       icon: <Gauge className="w-10 h-10 text-tech-blue" />,
-      desc: "AUTOSAR, automotive electronics, vehicle dynamics" 
+      desc: "Beckhoff TwinCAT, Allen-Bradley PLC, Siemens PLC, NI LabVIEW" 
     },
     { 
       title: "Automation", 
@@ -30,9 +30,9 @@ const About = () => {
       desc: "Robotics, Industrial Automation, IoT" 
     },
     { 
-      title: "Research", 
-      icon: <Lightbulb className="w-10 h-10 text-tech-blue" />,
-      desc: "Cobots, Industrial Robots, pHRI, Mechatronics" 
+      title: "Languages", 
+      icon: <Globe className="w-10 h-10 text-tech-blue" />,
+      desc: "Hindi (Native), English (Fluent)" 
     }
   ];
 
@@ -48,10 +48,10 @@ const About = () => {
               I have extensive experience in instrumentation and software development with a focus on robotics and mechatronics. My research revolves around Collaborative Robots (Cobots) and Physical Human-Robot Interaction (pHRI).
             </p>
             <p className="text-gray-700 mb-6">
-              My technical expertise spans across multiple domains including programming, electronics, control systems, and mechanical design. I approach engineering challenges with an integrated perspective, combining hardware and software solutions.
+              My technical expertise spans across multiple domains including programming, electronics, control systems, and mechanical design. I specialize in kinematics, dynamics and compliant control of serial, parallel and hybrid robots with applications in exoskeletons, humanoids, and rehabilitation.
             </p>
             <p className="text-gray-700">
-              Currently, I'm pursuing my Ph.D. at Indian Institute of Technology (Indian School of Mines), Dhanbad, where I focus on advancing robotics technology through innovative research.
+              Currently, I'm pursuing my Ph.D. at Indian Institute of Technology (Indian School of Mines), Dhanbad, where I focus on advancing robotics technology through innovative research in the fields of Parallel Robots, Compliant Control, Serial Robots, Kinematics, Dynamics, and Automation.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

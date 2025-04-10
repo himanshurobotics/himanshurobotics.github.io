@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
@@ -6,27 +5,29 @@ const Education = () => {
   const educationData = [
     {
       school: "Indian Institute of Technology (Indian School of Mines), Dhanbad",
-      degree: "Doctor of Philosophy - PhD, Robotics, Mechatronics and Automation",
-      date: "Aug 2021 - Present",
-      location: "Dhanbad, Jharkhand, India",
-      description: "Specialization in the field of Cobots, Industrial Robots, Mechatronics, Control Systems and Automation.",
-      skills: ["Robotics", "Mechatronics", "Python", "Beckhoff TwinCAT", "C++", "Matlab", "Simulink", "Automation", "SolidWorks"],
+      degree: "Doctor of Philosophy - PhD, Robotics Engineer",
+      date: "2021 - Present",
+      location: "Jharkhand, India",
+      description: "Specialization in the field of Robotics, Mechatronics, Control Systems and Automation.",
+      skills: ["Robotics", "Compliant control", "Parallel robots", "Dynamics", "Kinematics"],
       logo: "/lovable-uploads/777e1061-97a2-4224-8d31-c9fd08b94a35.png"
     },
     {
-      school: "Netaji Subhas Institute of Technology",
-      degree: "Master of Technology - MTech, Mechatronics",
+      school: "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
+      degree: "Master of Technology - MTech, Mechatronics Engineering",
       date: "2019 - 2021",
       location: "New Delhi, Delhi, India",
-      description: "Specialization in the field of Robotics, Mechatronics, Control Systems and Automation.",
+      description: "Specialization in the field of Robotics and Mechatronics.",
+      skills: ["Robotics", "Serial robots", "Dynamics", "Kinematics", "Fractional order fuzzy control", "Artificial Intelligence"],
       logo: "/lovable-uploads/f57e561d-cae9-4b85-bdf4-f2975deabe0d.png"
     },
     {
-      school: "The LNM Institute of Information Technology",
-      degree: "Bachelor of Technology - BTech, Specialization in Mechatronics",
+      school: "The LNM Institute of Information Technology, Jaipur",
+      degree: "Bachelor of Technology - BTech, Mechanical Engineering with specialization in Mechatronics",
       date: "2014 - 2018",
-      location: "Jaipur Area, India",
-      description: "Robotics and Mechatronics System Design enthusiast. Participated in various activities including being the Event Coordinator for ASME E-Fest Asia Pacific'17.",
+      location: "Rajasthan, India",
+      description: "Robotics and Mechatronics System Design enthusiast.",
+      skills: ["Mechatronics", "Control", "Embedded systems", "Automobile"],
       activities: [
         "Event Coordinator, Organizing Committee ASME E-Fest Asia Pacific'17",
         "Teaching Assistant",
