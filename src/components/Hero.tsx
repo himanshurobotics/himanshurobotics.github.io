@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { GitHub, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -37,7 +36,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-tech-blue transition-colors"
               >
-                <GitHub className="h-6 w-6" />
+                <Github className="h-6 w-6" />
               </a>
               <a 
                 href="#" 
