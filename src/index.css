@@ -105,20 +105,20 @@
 }
 
 .section-title {
-  @apply text-3xl md:text-4xl font-bold mb-8 text-tech-darkblue;
+  @apply text-3xl md:text-4xl font-bold mb-8 text-tech-darkblue dark:text-tech-lightblue;
 }
 
 .section-subtitle {
-  @apply text-xl font-semibold mb-4 text-tech-blue;
+  @apply text-xl font-semibold mb-4 text-tech-blue dark:text-tech-accent;
 }
 
 .timeline-item {
-  @apply relative pl-8 pb-8 border-l border-tech-blue;
+  @apply relative pl-8 pb-8 border-l border-tech-blue dark:border-tech-accent;
 }
 
 .timeline-item::before {
   content: '';
-  @apply absolute w-4 h-4 bg-tech-blue rounded-full -left-2 mt-1;
+  @apply absolute w-4 h-4 bg-tech-blue dark:bg-tech-accent rounded-full -left-2 mt-1;
 }
 
 .timeline-item:last-child {
@@ -126,9 +126,9 @@
 }
 
 .skill-tag {
-  @apply px-3 py-1 bg-tech-lightblue text-tech-blue rounded-full text-sm font-medium m-1 inline-block;
+  @apply px-3 py-1 bg-tech-lightblue dark:bg-tech-darkblue text-tech-blue dark:text-tech-lightblue rounded-full text-sm font-medium m-1 inline-block;
 }
 
 .project-card {
-  @apply bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100;
+  @apply bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100 dark:border-gray-700;
 }
