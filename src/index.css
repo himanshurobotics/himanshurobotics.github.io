@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 100% 35%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -22,7 +25,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 210 100% 45%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,43 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-tech-darkblue;
+}
+
+.section-subtitle {
+  @apply text-xl font-semibold mb-4 text-tech-blue;
+}
+
+.timeline-item {
+  @apply relative pl-8 pb-8 border-l border-tech-blue;
+}
+
+.timeline-item::before {
+  content: '';
+  @apply absolute w-4 h-4 bg-tech-blue rounded-full -left-2 mt-1;
+}
+
+.timeline-item:last-child {
+  @apply border-0;
+}
+
+.skill-tag {
+  @apply px-3 py-1 bg-tech-lightblue text-tech-blue rounded-full text-sm font-medium m-1 inline-block;
+}
+
+.project-card {
+  @apply bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100;
 }
