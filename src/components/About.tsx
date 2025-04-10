@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Database, Cpu, Gauge, Server, Lightbulb, Globe } from 'lucide-react';
+import { Code, Database, Cpu, Gauge, Server, Globe } from 'lucide-react';
 
 const About = () => {
   const skills = [
@@ -60,7 +60,7 @@ const About = () => {
                 <div className="mb-4">
                   {skill.icon}
                 </div>
-                <h4 className="text-lg font-semibold text-tech-darkblue dark:text-tech-lightblue mb-2">{skill.title}</h4>
+                <h4 className="text-lg font-semibold text-tech-darkblue dark:text-white mb-2">{skill.title}</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">{skill.desc}</p>
               </div>
             ))}

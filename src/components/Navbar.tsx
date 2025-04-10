@@ -47,14 +47,16 @@ const Navbar = () => {
           ? theme === 'dark' 
             ? 'bg-gray-900/95 shadow-md backdrop-blur-sm py-2' 
             : 'bg-white/95 shadow-md backdrop-blur-sm py-2'
-          : 'bg-transparent py-4'
+          : theme === 'dark'
+            ? 'bg-transparent py-4'
+            : 'bg-transparent py-4'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-tech-blue font-bold text-2xl">
-              Himanshu<span className="text-tech-darkblue dark:text-tech-lightblue">Varshney</span>
+            <a href="#home" className="text-tech-blue dark:text-tech-accent font-bold text-2xl">
+              Himanshu<span className="text-tech-darkblue dark:text-white">Varshney</span>
             </a>
           </div>
 

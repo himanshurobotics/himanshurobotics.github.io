@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <button 
             onClick={scrollToTop}
-            className="bg-tech-blue p-3 rounded-full hover:bg-opacity-80 transition-all mb-6"
+            className="bg-tech-blue dark:bg-tech-accent p-3 rounded-full hover:bg-opacity-80 transition-all mb-6"
             aria-label="Scroll to top"
           >
             <ArrowUp className="h-6 w-6" />
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="flex space-x-4 mb-8">
             <a 
               href="#" 
-              className="hover:text-tech-blue transition-colors"
+              className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
             <a 
               href="#" 
-              className="hover:text-tech-blue transition-colors"
+              className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -48,7 +48,7 @@ const Footer = () => {
             </a>
             <a 
               href="#" 
-              className="hover:text-tech-blue transition-colors"
+              className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="Twitter"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -59,13 +59,13 @@ const Footer = () => {
           
           <div className="text-center">
             <nav className="flex flex-wrap justify-center mb-6">
-              <a href="#home" className="px-4 py-2 hover:text-tech-blue transition-colors">Home</a>
-              <a href="#about" className="px-4 py-2 hover:text-tech-blue transition-colors">About</a>
-              <a href="#education" className="px-4 py-2 hover:text-tech-blue transition-colors">Education</a>
-              <a href="#experience" className="px-4 py-2 hover:text-tech-blue transition-colors">Experience</a>
-              <a href="#skills" className="px-4 py-2 hover:text-tech-blue transition-colors">Skills</a>
-              <a href="#projects" className="px-4 py-2 hover:text-tech-blue transition-colors">Projects</a>
-              <a href="#contact" className="px-4 py-2 hover:text-tech-blue transition-colors">Contact</a>
+              <a href="#home" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Home</a>
+              <a href="#about" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">About</a>
+              <a href="#education" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Education</a>
+              <a href="#experience" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Experience</a>
+              <a href="#skills" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Skills</a>
+              <a href="#projects" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Projects</a>
+              <a href="#contact" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Contact</a>
             </nav>
             
             <p className="text-gray-400">

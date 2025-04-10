@@ -5,27 +5,27 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-r from-tech-lightblue to-white min-h-screen flex items-center">
+    <section id="home" className="relative bg-gradient-to-r from-tech-lightblue to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex items-center">
       <div className="absolute inset-0 bg-[url('/lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png')] bg-center bg-cover opacity-10"></div>
       <div className="section-container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col space-y-6">
-            <h2 className="text-2xl font-medium text-tech-blue">Hello, I'm</h2>
-            <h1 className="text-5xl md:text-6xl font-bold text-tech-darkblue">
+            <h2 className="text-2xl font-medium text-tech-blue dark:text-tech-accent">Hello, I'm</h2>
+            <h1 className="text-5xl md:text-6xl font-bold text-tech-darkblue dark:text-white">
               Himanshu Varshney
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Robotics Engineer | Ph.D. Research Scholar
             </p>
-            <p className="text-gray-600 max-w-lg">
+            <p className="text-gray-600 dark:text-gray-300 max-w-lg">
               Research interests and expertise spans kinematics, dynamics and complaint control of serial, parallel and hybrid robots with applications in the fields of exoskeletons, humanoids, rehabilitation and industrial automation.
             </p>
             <div className="flex space-x-4">
-              <Button className="bg-tech-blue hover:bg-tech-darkblue">
+              <Button className="bg-tech-blue hover:bg-tech-darkblue dark:bg-tech-accent dark:hover:bg-tech-blue">
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
               </Button>
-              <Button variant="outline" className="border-tech-blue text-tech-blue hover:bg-tech-lightblue">
+              <Button variant="outline" className="border-tech-blue text-tech-blue hover:bg-tech-lightblue dark:border-tech-accent dark:text-tech-accent dark:hover:bg-gray-800">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </Button>
@@ -35,7 +35,7 @@ const Hero = () => {
                 href="https://himanshurobotics.github.io/"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-tech-blue transition-colors"
+                className="text-gray-600 hover:text-tech-blue dark:text-gray-400 dark:hover:text-tech-accent transition-colors"
               >
                 <Github className="h-6 w-6" />
               </a>
@@ -43,13 +43,13 @@ const Hero = () => {
                 href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-tech-blue transition-colors"
+                className="text-gray-600 hover:text-tech-blue dark:text-gray-400 dark:hover:text-tech-accent transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
                 href="mailto:hvarshneyperiodittdhn[test your common sense here for gmail]" 
-                className="text-gray-600 hover:text-tech-blue transition-colors"
+                className="text-gray-600 hover:text-tech-blue dark:text-gray-400 dark:hover:text-tech-accent transition-colors"
               >
                 <Mail className="h-6 w-6" />
               </a>
@@ -57,15 +57,15 @@ const Hero = () => {
           </div>
           <div className="flex justify-center md:justify-end">
             <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue shadow-xl">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-xl">
                 <img 
                   src="/lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png" 
                   alt="Himanshu Varshney" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
-                <div className="bg-tech-blue text-white text-sm font-medium px-4 py-2 rounded">
+              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow-lg">
+                <div className="bg-tech-blue dark:bg-tech-accent text-white text-sm font-medium px-4 py-2 rounded">
                   Indian Institute of Technology, Dhanbad
                 </div>
               </div>
