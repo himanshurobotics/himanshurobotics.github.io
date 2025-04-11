@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Code, 
@@ -11,8 +10,7 @@ import {
   Microscope, 
   BrainCircuit, 
   GraduationCap,
-  Cog,
-  Circuit
+  Cog
 } from 'lucide-react';
 
 const About = () => {

@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Github, Linkedin, Mail, Download, Cpu, Circuit, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Cpu, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
