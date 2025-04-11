@@ -11,7 +11,8 @@ import {
   Microscope, 
   BrainCircuit, 
   GraduationCap,
-  Cog
+  Cog,
+  Circuit
 } from 'lucide-react';
 
 const About = () => {
@@ -61,24 +62,26 @@ const About = () => {
   return (
     <section id="about" className="bg-white dark:bg-gray-900 py-20 relative overflow-hidden">
       {/* Technical Background Elements - Circuit Pattern */}
+      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
+      
       <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
         <div className="absolute top-10 left-10 w-40 h-40 border-2 border-tech-blue dark:border-tech-accent rounded-full"></div>
-        <div className="absolute top-60 right-20 w-20 h-20 border border-tech-blue dark:border-tech-accent rounded-full"></div>
+        <div className="absolute top-60 right-20 w-20 h-20 border border-tech-blue dark:border-tech-accent rounded-full animate-pulse-slow"></div>
         <div className="absolute bottom-20 left-1/4 w-60 h-60 border border-tech-blue dark:border-tech-accent rounded-full"></div>
         
         {/* Circuit Lines */}
-        <div className="absolute top-20 left-20 w-1/4 h-0.5 bg-tech-blue dark:bg-tech-accent"></div>
-        <div className="absolute top-40 right-20 w-40 h-0.5 bg-tech-blue dark:bg-tech-accent"></div>
-        <div className="absolute bottom-40 left-10 w-60 h-0.5 bg-tech-blue dark:bg-tech-accent"></div>
-        <div className="absolute top-1/3 right-1/3 w-0.5 h-40 bg-tech-blue dark:bg-tech-accent"></div>
+        <div className="absolute top-20 left-20 w-1/4 h-0.5 bg-tech-blue dark:bg-tech-accent animate-pulse-slow"></div>
+        <div className="absolute top-40 right-20 w-40 h-0.5 bg-tech-blue dark:bg-tech-accent animate-pulse-slow animation-delay-500"></div>
+        <div className="absolute bottom-40 left-10 w-60 h-0.5 bg-tech-blue dark:bg-tech-accent animate-pulse-slow animation-delay-1000"></div>
+        <div className="absolute top-1/3 right-1/3 w-0.5 h-40 bg-tech-blue dark:bg-tech-accent animate-pulse-slow"></div>
         
         {/* Gear Icons */}
-        <Cog className="absolute top-1/4 right-1/4 w-16 h-16 text-tech-blue dark:text-tech-accent opacity-10" />
-        <Cog className="absolute bottom-1/3 left-1/3 w-20 h-20 text-tech-blue dark:text-tech-accent opacity-10" />
+        <Cog className="absolute top-1/4 right-1/4 w-16 h-16 text-tech-blue dark:text-tech-accent opacity-10 animate-rotate" />
+        <Cog className="absolute bottom-1/3 left-1/3 w-20 h-20 text-tech-blue dark:text-tech-accent opacity-10 animate-rotate animation-delay-1000" />
       </div>
       
       <div className="section-container relative z-10">
-        <div className="flex items-center justify-center mb-8">
+        <div className="flex items-center justify-center mb-8 animate-fade-in">
           <div className="h-0.5 w-10 bg-tech-blue dark:bg-tech-accent"></div>
           <h2 className="section-title text-center mx-4 relative">
             About Me
@@ -88,7 +91,7 @@ const About = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md">
+          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md circuit-border animate-slide-up">
             <h3 className="section-subtitle mb-6 flex items-center">
               <Bot className="w-6 h-6 mr-2 text-tech-blue dark:text-tech-accent" />
               My Expertise
@@ -107,9 +110,10 @@ const About = () => {
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow hover:border-tech-blue dark:hover:border-tech-accent"
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all duration-300 hover:border-tech-blue dark:hover:border-tech-accent hover:scale-105 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="mb-4">
+                <div className="mb-4 transform transition-transform duration-500 hover:rotate-12">
                   {skill.icon}
                 </div>
                 <h4 className="text-lg font-semibold text-tech-darkblue dark:text-white mb-2">{skill.title}</h4>

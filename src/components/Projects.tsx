@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   CalendarClock, 
   Building, 
   CircleCheck, 
-  Info
+  Info,
+  Cpu,
+  Bot,
+  BrainCircuit
 } from 'lucide-react';
 import { 
   Accordion,
@@ -14,6 +17,8 @@ import {
 } from "@/components/ui/accordion";
 
 const Projects = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  
   const projectsData = [
     {
       title: "6-RSS Parallel Manipulator",
@@ -102,17 +107,43 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-white py-20">
-      <div className="section-container">
-        <h2 className="section-title text-center">Projects</h2>
+    <section id="projects" className="bg-white dark:bg-gray-900 py-20 relative overflow-hidden">
+      {/* Robotics Background Pattern */}
+      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
+      
+      {/* Animated Tech Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Cpu className="absolute top-20 left-[10%] w-12 h-12 text-tech-blue dark:text-tech-accent opacity-10 animate-pulse-slow" />
+        <Bot className="absolute bottom-40 right-[15%] w-16 h-16 text-tech-blue dark:text-tech-accent opacity-10 animate-pulse-slow animation-delay-500" />
+        <BrainCircuit className="absolute top-1/2 left-[80%] w-14 h-14 text-tech-blue dark:text-tech-accent opacity-10 animate-pulse-slow animation-delay-1000" />
+        
+        <div className="absolute top-[30%] left-[5%] w-40 h-0.5 bg-tech-blue dark:bg-tech-accent opacity-20 animate-pulse-slow"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-60 h-0.5 bg-tech-blue dark:bg-tech-accent opacity-20 animate-pulse-slow animation-delay-500"></div>
+      </div>
+      
+      <div className="section-container relative z-10">
+        <div className="flex items-center justify-center mb-12 animate-fade-in">
+          <div className="h-0.5 w-10 bg-tech-blue dark:bg-tech-accent"></div>
+          <h2 className="section-title text-center mx-4 relative">
+            Projects
+            <Bot className="w-6 h-6 text-tech-blue dark:text-tech-accent absolute -top-4 -right-8 animate-pulse-slow" />
+          </h2>
+          <div className="h-0.5 w-10 bg-tech-blue dark:bg-tech-accent"></div>
+        </div>
         
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 gap-8">
             {projectsData.map((project, index) => (
-              <div key={index} className="project-card">
+              <div 
+                key={index} 
+                className="project-card circuit-border animate-fade-in group"
+                style={{ animationDelay: `${index * 150}ms` }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
                 <div className="flex items-start gap-4 mb-4">
                   {project.logo && (
-                    <div className="w-10 h-10 rounded overflow-hidden flex-shrink-0">
+                    <div className="w-10 h-10 rounded overflow-hidden flex-shrink-0 border border-gray-200 dark:border-gray-700 group-hover:border-tech-blue dark:group-hover:border-tech-accent transition-colors duration-300">
                       <img 
                         src={project.logo} 
                         alt={project.organization} 
@@ -121,16 +152,16 @@ const Projects = () => {
                     </div>
                   )}
                   <div>
-                    <h3 className="text-xl font-semibold text-tech-darkblue">{project.title}</h3>
+                    <h3 className="text-xl font-semibold text-tech-darkblue dark:text-white group-hover:text-tech-blue dark:group-hover:text-tech-accent transition-colors duration-300">{project.title}</h3>
                     
-                    <div className="flex flex-wrap gap-4 mt-2 text-gray-600 text-sm">
+                    <div className="flex flex-wrap gap-4 mt-2 text-gray-600 dark:text-gray-400 text-sm">
                       <div className="flex items-center">
-                        <CalendarClock className="w-4 h-4 mr-1" />
+                        <CalendarClock className="w-4 h-4 mr-1 text-tech-blue dark:text-tech-accent" />
                         <span>{project.date}</span>
                       </div>
                       {project.organization && (
                         <div className="flex items-center">
-                          <Building className="w-4 h-4 mr-1" />
+                          <Building className="w-4 h-4 mr-1 text-tech-blue dark:text-tech-accent" />
                           <span>Associated with {project.organization}</span>
                         </div>
                       )}
@@ -139,15 +170,15 @@ const Projects = () => {
                 </div>
                 
                 {project.description && (
-                  <p className="text-gray-700 mb-4">{project.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
                 )}
                 
                 {project.awards && project.awards.length > 0 && (
                   <div className="mb-4">
-                    <p className="font-medium text-tech-blue">Awards:</p>
+                    <p className="font-medium text-tech-blue dark:text-tech-accent">Awards:</p>
                     <ul className="list-disc pl-5 mt-1">
                       {project.awards.map((award, idx) => (
-                        <li key={idx} className="text-gray-700">{award}</li>
+                        <li key={idx} className="text-gray-700 dark:text-gray-300">{award}</li>
                       ))}
                     </ul>
                   </div>
@@ -157,16 +188,18 @@ const Projects = () => {
                   <div className="mt-3">
                     <Accordion type="single" collapsible>
                       <AccordionItem value="details">
-                        <AccordionTrigger className="text-tech-blue font-medium">
-                          <Info className="w-4 h-4 mr-2" />
-                          Project Details
+                        <AccordionTrigger className="text-tech-blue dark:text-tech-accent font-medium">
+                          <div className="flex items-center">
+                            <Info className="w-4 h-4 mr-2" />
+                            Project Details
+                          </div>
                         </AccordionTrigger>
                         <AccordionContent>
                           <ul className="space-y-2 mt-2">
                             {project.points.map((point, idx) => (
                               <li key={idx} className="flex items-start gap-2">
-                                <CircleCheck className="w-5 h-5 text-tech-blue flex-shrink-0 mt-0.5" />
-                                <span className="text-gray-700">{point}</span>
+                                <CircleCheck className="w-5 h-5 text-tech-blue dark:text-tech-accent flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700 dark:text-gray-300">{point}</span>
                               </li>
                             ))}
                           </ul>
@@ -179,7 +212,7 @@ const Projects = () => {
                 {project.skills && project.skills.length > 0 && (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {project.skills.map((skill, idx) => (
-                      <span key={idx} className="skill-tag">{skill}</span>
+                      <span key={idx} className="skill-tag group-hover:bg-tech-blue/10 dark:group-hover:bg-tech-accent/10 transition-colors duration-300">{skill}</span>
                     ))}
                   </div>
                 )}
