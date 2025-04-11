@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Github, Linkedin, Mail, Download, Cpu, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative bg-gradient-to-r from-tech-lightblue to-white dark:from-gray-900 dark:to-gray-800 min-h-screen flex items-center overflow-hidden">
       {/* Circuit Board Pattern Background */}
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('./circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
       
       {/* Animated Tech Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -25,7 +26,7 @@ const Hero = () => {
         <Cpu className="absolute bottom-[20%] right-[15%] w-16 h-16 text-tech-blue dark:text-tech-accent opacity-10 animate-pulse" />
       </div>
       
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png')] bg-center bg-cover opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('./lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png')] bg-center bg-cover opacity-10"></div>
       
       <div className="section-container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -80,7 +81,7 @@ const Hero = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-xl relative">
                 <div className="absolute inset-0 bg-gradient-to-b from-tech-blue/20 to-transparent"></div>
                 <img 
-                  src="/lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png" 
+                  src="./lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png" 
                   alt="Himanshu Varshney" 
                   className="w-full h-full object-cover"
                 />
