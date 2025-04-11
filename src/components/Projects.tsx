@@ -109,7 +109,7 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-white dark:bg-gray-900 py-20 relative overflow-hidden">
       {/* Robotics Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('./robot-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
       
       {/* Animated Tech Elements */}
       <div className="absolute inset-0 pointer-events-none">

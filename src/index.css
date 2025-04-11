@@ -93,6 +93,9 @@
 
   body {
     @apply bg-background text-foreground font-poppins;
+    background-image: url('./circuit-pattern.svg');
+    background-repeat: repeat;
+    background-opacity: 0.02;
   }
 
   html {
@@ -237,7 +240,25 @@
 
 .circuit-border::before {
   content: '';
-  @apply absolute inset-0 bg-[url('/circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10 pointer-events-none;
+  @apply absolute inset-0 bg-[url('./circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10 pointer-events-none;
+}
+
+.robot-card {
+  @apply relative overflow-hidden;
+}
+
+.robot-card::before {
+  content: '';
+  @apply absolute -bottom-2 -right-2 w-16 h-16 bg-[url('./robot-pattern.svg')] bg-no-repeat opacity-10 z-0;
+}
+
+.tech-glow {
+  @apply relative;
+  box-shadow: 0 0 15px rgba(14, 118, 168, 0.2);
+}
+
+.tech-glow:hover {
+  box-shadow: 0 0 25px rgba(14, 118, 168, 0.4);
 }
 
 /* Dark mode class standardization */

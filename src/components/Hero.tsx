@@ -78,7 +78,7 @@ const Hero = () => {
           </div>
           <div className="flex justify-center md:justify-end">
             <div className="relative animate-float">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-xl relative">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-xl relative tech-glow">
                 <div className="absolute inset-0 bg-gradient-to-b from-tech-blue/20 to-transparent"></div>
                 <img 
                   src="./lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png" 
