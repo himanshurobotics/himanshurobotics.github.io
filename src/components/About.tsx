@@ -7,7 +7,7 @@ import {
   Gauge, 
   Server, 
   Globe, 
-  Robot, 
+  Bot, 
   Microscope, 
   BrainCircuit, 
   GraduationCap,
@@ -38,7 +38,7 @@ const About = () => {
     },
     { 
       title: "Robotics", 
-      icon: <Robot className="w-10 h-10 text-tech-blue dark:text-tech-accent" />,
+      icon: <Bot className="w-10 h-10 text-tech-blue dark:text-tech-accent" />,
       desc: "Parallel Robots, Serial Robots, Kinematics, Dynamics, Compliant Control" 
     },
     { 
@@ -90,7 +90,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
           <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md">
             <h3 className="section-subtitle mb-6 flex items-center">
-              <Robot className="w-6 h-6 mr-2 text-tech-blue dark:text-tech-accent" />
+              <Bot className="w-6 h-6 mr-2 text-tech-blue dark:text-tech-accent" />
               My Expertise
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
