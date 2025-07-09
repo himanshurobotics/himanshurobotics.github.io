@@ -8,7 +8,18 @@ const Experience = () => {
       position: "Senior Research Fellow",
       company: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       type: "Full-time",
-      date: "Aug 2021 - Present",
+      date: "Aug 2023 - Present",
+      location: "Dhanbad, Jharkhand, India",
+      mode: "On-site",
+      description: "Specialization in Kinematics, Dynamics and Control of Serial, Parallel and Hybrid robots.",
+      skills: ["Parallel robot", "Dynamics", "Kinematics", "Control"],
+      logo: "/lovable-uploads/iitismlogo.png"
+    },
+    {
+      position: "Junior Research Fellow",
+      company: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      type: "Full-time",
+      date: "Aug 2021 - July 2023 · 2 years",
       location: "Dhanbad, Jharkhand, India",
       mode: "On-site",
       description: "Specialization in Kinematics, Dynamics and Control of Serial, Parallel and Hybrid robots.",
@@ -19,8 +30,9 @@ const Experience = () => {
       position: "Teaching Assistant",
       company: "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
       type: "Full-time",
-      date: "Aug 2019 - Jul 2021 · 2 yrs",
+      date: "Aug 2019 - Jul 2021 · 2 years",
       location: "New Delhi, Delhi, India",
+      mode: "On-site",
       description: "Worked as a Teaching Assistant for 2 years in the Department of Instrumentation and Control Engineering. Specializing in Robotics and control.",
       skills: ["Serial robot", "Control"],
       logo: "/lovable-uploads/NSUT_logo.png"
@@ -30,6 +42,7 @@ const Experience = () => {
       company: "Indian Oil Corp Limited",
       date: "May 16th, 2017 - Jun 15th, 2017 · 1 month",
       location: "Mathura, India",
+      mode: "On-site",
       logo: "/lovable-uploads/Indian_Oil_Logo.png"
     }
   ];
@@ -40,14 +53,18 @@ const Experience = () => {
       organization: "The LNM Institute of Information Technology",
       date: "Mar 2017 - Mar 2017",
       location: "Jaipur, Rajasthan, India",
-      description: "Lead organizer of a main event 'Impromptu Design Challenge'."
+      mode: "On-site",
+      description: "Lead organizer of a main event 'Impromptu Design Challenge'.",
+      logo: "/lovable-uploads/LNMIIT-Logo.png"
     },
     {
       position: "Class Representative",
       organization: "The LNM Institute of Information Technology",
       date: "Aug 2015 - Apr 2018",
       location: "Jaipur, Rajasthan, India",
-      description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students."
+      mode: "On-site",
+      description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students.",
+      logo: "/lovable-uploads/LNMIIT-Logo.png"
     }
   ];
   
