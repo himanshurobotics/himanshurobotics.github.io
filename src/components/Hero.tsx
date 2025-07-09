@@ -115,7 +115,7 @@ const Hero = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-2xl relative tech-glow">
                 <div className="absolute inset-0 bg-gradient-to-b from-tech-blue/20 to-transparent"></div>
                 <img 
-                  src="/lovable-uploads/61ba78e5-9f48-430c-9e9a-c6c6fc995031.png" 
+                  src="/lovable-uploads/prof_pic.png" 
                   alt="Himanshu Varshney - Robotics Engineer" 
                   className="w-full h-full object-cover"
                 />
@@ -125,7 +125,7 @@ const Hero = () => {
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow-lg animate-pulse border border-tech-blue/20 dark:border-tech-accent/20">
                 <div className="bg-gradient-to-r from-tech-blue to-tech-darkblue dark:from-tech-accent dark:to-tech-blue text-white text-sm font-medium px-4 py-2 rounded flex items-center gap-2">
                   <Cpu className="w-4 h-4" />
-                  Indian Institute of Technology, Dhanbad
+                  Indian Institute of Technology (Indian School of Mines), Dhanbad
                 </div>
               </div>
               <div className="absolute -top-2 -left-2 bg-tech-blue/10 dark:bg-tech-accent/10 w-full h-full rounded-full animate-pulse-slow border border-tech-blue/20 dark:border-tech-accent/20"></div>
