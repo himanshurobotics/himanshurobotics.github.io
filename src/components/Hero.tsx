@@ -77,13 +77,13 @@ const Hero = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
               </Button>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 className="border-tech-blue text-tech-blue hover:bg-tech-lightblue dark:border-tech-accent dark:text-tech-accent dark:hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
-              </Button>
+              </Button> */}
             </div>
             <div className="flex space-x-4 pt-4">
               <a 
