@@ -6,9 +6,19 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Mail, Phone, Send } from 'lucide-react';
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Future implementation of form submission logic
+    const formData = new FormData(e.currentTarget);
+    const subject = encodeURIComponent(formData.get('subject') as string || 'Contact from Portfolio');
+    const body = encodeURIComponent(`
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+
+Message:
+${formData.get('message')}
+    `);
+    
+    window.location.href = `mailto:hvarshney.iitdhn@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -43,21 +53,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-tech-darkblue">Email</h4>
-                  <a className="text-gray-700 hover:text-tech-blue">
-                    hvarshney[dot]iitdhn[use your brain for gmail]
+                  <a href="mailto:hvarshney.iitdhn@gmail.com" className="text-gray-700 hover:text-tech-blue">
+                    hvarshney.iitdhn@gmail.com
                   </a>
                 </div>
               </div>
-              
-              {/* <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-medium text-tech-darkblue">Phone</h4>
-                  <p className="text-gray-700">(+91) 123-456-7890</p>
-                </div>
-              </div> */}
             </div>
             
             <div className="mt-10">
@@ -84,10 +84,19 @@ const Contact = () => {
                 <a 
                   href="#" 
                   className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
-                  aria-label="Twitter"
+                  aria-label="Google Scholar"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                  </svg>
+                </a>
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
+                  aria-label="ORCID"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.881-1.303 3.881-3.722 0-2.131-1.303-3.722-3.881-3.722h-2.297z"/>
                   </svg>
                 </a>
               </div>
@@ -106,8 +115,10 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name" 
+                    name="name"
                     placeholder="Enter your name" 
                     className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -116,9 +127,11 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email" 
+                    name="email"
                     type="email" 
                     placeholder="Enter your email" 
-                    className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue" 
+                    className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
+                    required
                   />
                 </div>
               </div>
@@ -129,8 +142,10 @@ const Contact = () => {
                 </label>
                 <Input 
                   id="subject" 
+                  name="subject"
                   placeholder="Enter subject" 
-                  className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue" 
+                  className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
+                  required
                 />
               </div>
               
@@ -140,8 +155,10 @@ const Contact = () => {
                 </label>
                 <Textarea 
                   id="message" 
+                  name="message"
                   placeholder="Enter your message" 
-                  className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue min-h-[120px]" 
+                  className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue min-h-[120px]"
+                  required
                 />
               </div>
               
