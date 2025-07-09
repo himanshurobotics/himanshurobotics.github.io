@@ -10,6 +10,16 @@ const Footer = () => {
     });
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <footer className="bg-tech-darkblue text-white py-10">
       <div className="section-container">
@@ -29,7 +39,9 @@ const Footer = () => {
           
           <div className="flex space-x-4 mb-8">
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/himanshu-varshney/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="LinkedIn"
             >
@@ -38,7 +50,9 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://github.com/himanshuvarshney" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="GitHub"
             >
@@ -47,7 +61,9 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="Google Scholar"
             >
@@ -56,7 +72,9 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://orcid.org/YOUR_ORCID_ID" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
               aria-label="ORCID"
             >
@@ -68,13 +86,13 @@ const Footer = () => {
           
           <div className="text-center">
             <nav className="flex flex-wrap justify-center mb-6">
-              <a href="#home" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Home</a>
-              <a href="#about" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">About</a>
-              <a href="#education" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Education</a>
-              <a href="#experience" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Experience</a>
-              <a href="#skills" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Skills</a>
-              <a href="#projects" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Projects</a>
-              <a href="#contact" className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors">Contact</a>
+              <button onClick={() => scrollToSection('home')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Home</button>
+              <button onClick={() => scrollToSection('about')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">About</button>
+              <button onClick={() => scrollToSection('education')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Education</button>
+              <button onClick={() => scrollToSection('experience')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Experience</button>
+              <button onClick={() => scrollToSection('skills')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Skills</button>
+              <button onClick={() => scrollToSection('projects')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Projects</button>
+              <button onClick={() => scrollToSection('contact')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Contact</button>
             </nav>
             
             <p className="text-gray-400">
