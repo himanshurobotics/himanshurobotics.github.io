@@ -61,7 +61,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" 
+              href="https://scholar.google.com/citations?user=HPYKWB4AAAAJ&hl" 
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
@@ -72,7 +72,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://orcid.org/YOUR_ORCID_ID" 
+              href="https://orcid.org/0000-0001-5025-7224" 
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-tech-blue dark:hover:text-tech-accent transition-colors"
