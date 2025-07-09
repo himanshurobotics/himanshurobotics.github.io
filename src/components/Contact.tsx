@@ -64,7 +64,7 @@ const Contact = () => {
               <h4 className="text-lg font-medium text-tech-darkblue mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/himanshu-varshney/" 
                   className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -73,7 +73,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/himanshurobotics" 
                   className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
                   aria-label="GitHub"
                 >
