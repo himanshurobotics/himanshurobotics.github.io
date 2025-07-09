@@ -53,8 +53,8 @@ ${formData.get('message')}
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-tech-darkblue">Email</h4>
-                  <a href="mailto:hvarshney.iitdhn@gmail.com" className="text-gray-700 hover:text-tech-blue">
-                    hvarshney.iitdhn@gmail.com
+                  <a className="text-gray-700 hover:text-tech-blue">
+                    hvarshney[dot]iitdhn[use your brain for gmail]
                   </a>
                 </div>
               </div>
@@ -82,7 +82,7 @@ ${formData.get('message')}
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://scholar.google.com/citations?user=HPYKWB4AAAAJ&hl" 
                   className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
                   aria-label="Google Scholar"
                 >
@@ -91,7 +91,7 @@ ${formData.get('message')}
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://orcid.org/0000-0001-5025-7224" 
                   className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center text-white hover:bg-tech-darkblue transition-colors"
                   aria-label="ORCID"
                 >
