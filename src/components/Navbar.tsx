@@ -90,7 +90,7 @@ const Navbar = () => {
             
             <div className="ml-4">
               <Toggle 
-                pressed={theme === 'light'} 
+                pressed={theme === 'dark'} 
                 onPressedChange={toggleTheme}
                 aria-label="Toggle theme"
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-tech-blue/10 dark:hover:bg-tech-accent/10 transition-colors duration-300"
@@ -107,7 +107,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <Toggle 
-              pressed={theme === 'light'} 
+              pressed={theme === 'dark'} 
               onPressedChange={toggleTheme}
               aria-label="Toggle theme"
               className="mr-2 p-2 rounded-full bg-gray-100 dark:bg-gray-800"
