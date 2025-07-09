@@ -85,7 +85,7 @@ const Hero = () => {
                 Download CV
               </Button> */}
             </div>
-            <div className="flex space-x-4 pt-4">
+            {/* <div className="flex space-x-4 pt-4">
               <a 
                 href="https://himanshurobotics.github.io/"
                 target="_blank" 
@@ -108,7 +108,7 @@ const Hero = () => {
               >
                 <Mail className="h-6 w-6" />
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-center md:justify-end">
             <div className="relative animate-float">
