@@ -10,7 +10,7 @@ const Education = () => {
       location: "Jharkhand, India",
       description: "Specialization in the field of Robotics, Mechatronics, Control Systems and Automation.",
       skills: ["Robotics", "Compliant control", "Parallel robots", "Dynamics", "Kinematics"],
-      logo: "/lovable-uploads/777e1061-97a2-4224-8d31-c9fd08b94a35.png"
+      logo: "/lovable-uploads/iitismlogo.png"
     },
     {
       school: "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
@@ -19,7 +19,7 @@ const Education = () => {
       location: "New Delhi, Delhi, India",
       description: "Specialization in the field of Robotics and Mechatronics.",
       skills: ["Robotics", "Serial robots", "Dynamics", "Kinematics", "Fractional order fuzzy control", "Artificial Intelligence"],
-      logo: "/lovable-uploads/f57e561d-cae9-4b85-bdf4-f2975deabe0d.png"
+      logo: "/lovable-uploads/NSUT_logo.png"
     },
     {
       school: "The LNM Institute of Information Technology, Jaipur",
