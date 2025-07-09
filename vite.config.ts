@@ -11,9 +11,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    outDir: "docs", // GitHub Pages uses either root or /docs folder
-  },
+  // build: {
+  //   outDir: "docs", // GitHub Pages uses either root or /docs folder
+  // },
   plugins: [
     react(),
     mode === 'development' &&
