@@ -6,14 +6,14 @@ const Experience = () => {
   const experienceData = [
     {
       position: "Senior Research Fellow",
-      company: "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+      company: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       type: "Full-time",
       date: "Aug 2021 - Present",
       location: "Dhanbad, Jharkhand, India",
       mode: "On-site",
       description: "Specialization in Kinematics, Dynamics and Control of Serial, Parallel and Hybrid robots.",
       skills: ["Parallel robot", "Dynamics", "Kinematics", "Control"],
-      logo: "/lovable-uploads/777e1061-97a2-4224-8d31-c9fd08b94a35.png"
+      logo: "/lovable-uploads/iitismlogo.png"
     },
     {
       position: "Teaching Assistant",
@@ -23,33 +23,31 @@ const Experience = () => {
       location: "New Delhi, Delhi, India",
       description: "Worked as a Teaching Assistant for 2 years in the Department of Instrumentation and Control Engineering. Specializing in Robotics and control.",
       skills: ["Serial robot", "Control"],
-      logo: "/lovable-uploads/f57e561d-cae9-4b85-bdf4-f2975deabe0d.png"
+      logo: "/lovable-uploads/NSUT_logo.png"
     },
     {
       position: "Summer Internship",
       company: "Indian Oil Corp Limited",
-      date: "May 2017 - Jun 2017 · 2 mos",
-      location: "Mathura Area, India",
-      logo: "/lovable-uploads/6ff555c7-10a4-44fc-afde-fc23deec3623.png"
+      date: "May 16th, 2017 - Jun 15th, 2017 · 1 month",
+      location: "Mathura, India",
+      logo: "/lovable-uploads/Indian_Oil_Logo.png"
     }
   ];
   
   const volunteerData = [
     {
-      position: "Event Coordinator",
-      organization: "ASME E-Fests Asia Pacific'17",
+      position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
+      organization: "The LNM Institute of Information Technology",
       date: "Mar 2017 - Mar 2017",
-      description: "Lead organizer of a main event 'Impromptu Design Challenge'.",
-      skills: ["ASME", "E-Fests"],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      location: "Jaipur, Rajasthan, India",
+      description: "Lead organizer of a main event 'Impromptu Design Challenge'."
     },
     {
       position: "Class Representative",
-      organization: "The LNMIIT, Jaipur",
+      organization: "The LNM Institute of Information Technology",
       date: "Aug 2015 - Apr 2018",
-      description: "Class Representative of Mechanical and Mechatronics Engineering Department.",
-      skills: ["Class representative"],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      location: "Jaipur, Rajasthan, India",
+      description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students."
     }
   ];
   

@@ -4,10 +4,10 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 const Education = () => {
   const educationData = [
     {
-      school: "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+      school: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       degree: "Doctor of Philosophy - PhD, Robotics Engineer",
       date: "2021 - Present",
-      location: "Jharkhand, India",
+      location: "Dhanbad, Jharkhand, India",
       description: "Specialization in the field of Robotics, Mechatronics, Control Systems and Automation.",
       skills: ["Robotics", "Compliant control", "Parallel robots", "Dynamics", "Kinematics"],
       logo: "/lovable-uploads/iitismlogo.png"
@@ -22,12 +22,12 @@ const Education = () => {
       logo: "/lovable-uploads/NSUT_logo.png"
     },
     {
-      school: "The LNM Institute of Information Technology, Jaipur",
+      school: "The LNM Institute of Information Technology",
       degree: "Bachelor of Technology - BTech, Mechanical Engineering with specialization in Mechatronics",
       date: "2014 - 2018",
-      location: "Rajasthan, India",
+      location: "Jaipur, Rajasthan, India",
       description: "Robotics and Mechatronics System Design enthusiast.",
-      skills: ["Mechatronics", "Control", "Embedded systems", "Automobile"],
+      skills: ["Robotics", "Mechatronics", "Control", "Embedded systems", "Automobile"],
       activities: [
         "Event Coordinator, Organizing Committee ASME E-Fest Asia Pacific'17",
         "Teaching Assistant",
@@ -37,18 +37,18 @@ const Education = () => {
       logo: "/lovable-uploads/LNMIIT-Logo.png"
     },
     {
-      school: "Kendriya Vidyalaya",
-      degree: "Intermediate, Physics, Chemistry, Mathematics & Computer Science (C++)",
+      school: "Kendriya Vidyalaya No. 2 (Mathura Refinery)",
+      degree: "Intermediate (Physics, Chemistry, Mathematics, Computer Science (C++), English)",
       date: "2013 - 2014",
-      location: "India",
+      location: "Mathura, Uttar Pradesh, India",
       grade: "90.80%",
       logo: "/lovable-uploads/kvs-logo.png"
     },
     {
-      school: "Kendriya Vidyalaya",
-      degree: "High School, Science, Mathematics, English",
+      school: "Kendriya Vidyalaya No. 2 (Mathura Refinery)",
+      degree: "High School (Science, Mathematics, English)",
       date: "2011 - 2012",
-      location: "India",
+      location: "Mathura, Uttar Pradesh, India",
       grade: "9.6 CGPA",
       logo: "/lovable-uploads/kvs-logo.png"
     }
