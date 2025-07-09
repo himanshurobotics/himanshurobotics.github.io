@@ -21,7 +21,9 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-semibold text-tech-darkblue mb-6">Contact Information</h3>
             <p className="text-gray-700 mb-8">
-              Feel free to contact me for research collaborations, project inquiries, or any questions about my work in robotics and mechatronics.
+              For research collaborations, projects, or any questions about my work in robotics, mechatronics, control and automation.
+              <br />
+              Be professional and use e-mail if you want to connect with a hardcore robotics engineer (by birth)
             </p>
             
             <div className="space-y-6">
@@ -31,7 +33,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-tech-darkblue">Location</h4>
-                  <p className="text-gray-700">Dhanbad, Jharkhand, India</p>
+                  <p className="text-gray-700"> IIT (ISM) Dhanbad, Jharkhand, India</p>
                 </div>
               </div>
               
@@ -41,13 +43,13 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-tech-darkblue">Email</h4>
-                  <a href="mailto:contact@example.com" className="text-gray-700 hover:text-tech-blue">
-                    contact@example.com
+                  <a className="text-gray-700 hover:text-tech-blue">
+                    hvarshney[dot]iitdhn[use your brain for gmail]
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-tech-blue rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -55,7 +57,7 @@ const Contact = () => {
                   <h4 className="text-lg font-medium text-tech-darkblue">Phone</h4>
                   <p className="text-gray-700">(+91) 123-456-7890</p>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <div className="mt-10">
