@@ -46,23 +46,28 @@ const Skills = () => {
     {
       name: "Python",
       category: "programming",
-      level: 88,
+      level: 95,
       institute: "Senior Research Fellow at IIT Dhanbad"
     },
     {
       name: "C++",
       category: "programming",
-      level: 85
+      level: 95
+    },
+    {
+      name: "C#",
+      category: "programming",
+      level: 80
     },
     {
       name: "C",
       category: "programming",
-      level: 83
+      level: 85
     },
     {
-      name: "MATLAB",
+      name: "MATLAB & Simulink",
       category: "programming",
-      level: 90
+      level: 95
     },
     {
       name: "AI/ML",
@@ -72,19 +77,19 @@ const Skills = () => {
     {
       name: "Embedded-C",
       category: "programming",
-      level: 80
+      level: 85
     },
     {
       name: "Assembly",
       category: "programming",
-      level: 70
+      level: 75
     },
     
     // Design & Modeling Skills
     {
       name: "SolidWorks",
       category: "design",
-      level: 82
+      level: 85
     },
     {
       name: "MSC Adams",
@@ -94,7 +99,7 @@ const Skills = () => {
     {
       name: "AutoCAD",
       category: "design",
-      level: 78
+      level: 75
     },
     {
       name: "ANSYS-APDL",
@@ -112,22 +117,22 @@ const Skills = () => {
     {
       name: "Mechatronics",
       category: "control",
-      level: 90
+      level: 95
     },
     {
       name: "Beckhoff TwinCAT",
       category: "control",
-      level: 85
+      level: 90
     },
     {
       name: "Allen-Bradley PLC",
       category: "control",
-      level: 80
+      level: 85
     },
     {
       name: "Siemens PLC",
       category: "control",
-      level: 82
+      level: 85
     },
     {
       name: "NI LabVIEW",
@@ -137,12 +142,12 @@ const Skills = () => {
     {
       name: "Parallel Robots",
       category: "control",
-      level: 92
+      level: 95
     },
     {
       name: "Serial Robots",
       category: "control",
-      level: 88
+      level: 95
     },
     {
       name: "Kinematics",
@@ -152,7 +157,7 @@ const Skills = () => {
     {
       name: "Dynamics",
       category: "control",
-      level: 88
+      level: 90
     },
     {
       name: "Control Systems",
@@ -167,7 +172,7 @@ const Skills = () => {
     {
       name: "Automation",
       category: "control",
-      level: 87
+      level: 90
     },
     
     // Languages
