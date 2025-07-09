@@ -7,13 +7,12 @@ const Awards = () => {
     {
       title: "Best Paper Award",
       organization: "Congress on Control, Robotics, and Mechatronics (CRM 2023)",
-      date: "2023.03.26",
+      date: "March 26th, 2023",
       description: "Best paper award for paper title 'Non-linear fractional order fuzzy PD plus I controller for trajectory optimization of 6-DOF modified Puma 560 robotic arm' in the conference."
     },
     {
       title: "Award of Excellence",
       organization: "Indian Oil Corporation Limited (IOCL)",
-      date: "2023.03.26",
       description: "Awarded four times for exemplary performance in high-school, intermediate, graduation and postgraduation."
     }
   ];
@@ -43,9 +42,15 @@ const Awards = () => {
   
   const publicationsData = [
     {
+      title: "Framework for implementing and investigating sensorless force control for collaborative manipulation using parallel robots",
+      publication: "Multibody System Dynamics (Springer)",
+      date: "June 30th, 2025",
+      description: "This research focuses on implementing and evaluating indirect force control strategies (impedance and admittance control) for all revolute parallel manipulators to ensure safe and efficient human-robot interaction by mitigating high interaction forces while maintaining their inherent benefits like high accuracy, stiffness and backdrivability."
+    },
+    {
       title: "Non-linear fractional order fuzzy PD plus I controller for trajectory optimization of 6-DOF modified Puma 560 robotic arm",
       publication: "Proceedings of Congress on Control, Robotics (CRM 2023), and Mechatronics, Smart Innovation, Systems and Technologies (Springer)",
-      date: "2023.11.09",
+      date: "November 11th, 2023",
       description: "Employed the non-integer order calculus to enhance the control action of the non-linear fractional order fuzzy PD plus I (FOFPD+I) controller to control a serial robotic arm."
     }
   ];
