@@ -6,14 +6,14 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./", // Set base to relative path for GitHub Pages
+  base: "/himanshurobotics/", // Set base to relative path for GitHub Pages
   server: {
     host: "::",
     port: 8080,
   },
-  build: {
-    outDir: "docs", // GitHub Pages uses either root or /docs folder
-  },
+  // build: {
+  //   outDir: "docs", // GitHub Pages uses either root or /docs folder
+  // },
   plugins: [
     react(),
     mode === 'development' &&
