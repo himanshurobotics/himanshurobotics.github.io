@@ -46,8 +46,7 @@ const Skills = () => {
     {
       name: "Python",
       category: "programming",
-      level: 95,
-      institute: "Senior Research Fellow at IIT Dhanbad"
+      level: 95
     },
     {
       name: "C++",
@@ -111,8 +110,7 @@ const Skills = () => {
     {
       name: "Robotics",
       category: "control",
-      level: 95,
-      institute: "IIT Dhanbad"
+      level: 95
     },
     {
       name: "Mechatronics",
