@@ -152,14 +152,6 @@ const Experience = () => {
                   {item.description && (
                     <p className="mt-3 text-gray-700">{item.description}</p>
                   )}
-                  
-                  {item.skills && (
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {item.skills.map((skill, idx) => (
-                        <span key={idx} className="skill-tag">{skill}</span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
