@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   CalendarClock, 
@@ -30,8 +29,7 @@ const Projects = () => {
         "Beckhoff",
         "Python Beckhoff-ADS",
         "Beckhoff-TwinCAT"
-      ],
-      logo: "/lovable-uploads/777e1061-97a2-4224-8d31-c9fd08b94a35.png"
+      ]
     },
     {
       title: "Interval System's Arithematics Calculator",
@@ -42,16 +40,14 @@ const Projects = () => {
         "Model order reduction",
         "Inverval systems",
         "Control systems"
-      ],
-      logo: "/lovable-uploads/f57e561d-cae9-4b85-bdf4-f2975deabe0d.png"
+      ]
     },
     {
       title: "M.Tech. Thesis - Non-linear fractional order fuzzy PD plus I controller for trajectory optimization of 6-DOF modified Puma 560 robotic arm",
       date: "Aug 2020 - Jul 2021",
       organization: "Netaji Subhas Institute of Technology",
       description: "The purpose of this research is to employ non-integer order calculus to enhance the control action of non-linear fractional-order fuzzy PD plus I (FOFPD+I) controller. To operate a non-linear 6-DOF Puma 560 robotic arm, a FOFPD+I controller is developed and implemented. Fractional order fuzzy Proportional-Derivative (FOFPD) and fractional order fuzzy Integral (FOFI) controllers are used to create the proposed controller. Because of the non-linear gains, the proposed control approach preserves the linear structure of the fractional-order proportional-derivative plus integral (FOPD+I) controller while still providing adaptive capabilities. Further, PID controllers are also derived to compare with FOFPD+I controllers. Both FOFPD+I and PID controller parameters are optimized using Non-dominated Sorting Genetic Algorithm - II (NSGA-II). The performance and effectiveness of the presented controller are examined in terms of trajectory tracking, tracking error, and robotic arm control efforts.",
-      awards: ["Best Paper Award at Congress on Control, Robotics, and Mechatronics (CRM 2023)"],
-      logo: "/lovable-uploads/f57e561d-cae9-4b85-bdf4-f2975deabe0d.png"
+      awards: ["Best Paper Award at Congress on Control, Robotics, and Mechatronics (CRM 2023)"]
     },
     {
       title: "Virtual Security Guard - Graduation project",
@@ -65,8 +61,7 @@ const Projects = () => {
       skills: [
         "Mechatronics",
         "Computer vision"
-      ],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      ]
     },
     {
       title: "Conversion of conventional braking system to ABS in a car",
@@ -76,15 +71,13 @@ const Projects = () => {
       skills: [
         "Automotive electronics",
         "Mechatronics"
-      ],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      ]
     },
     {
       title: "AUTOMATIC FAN AND LIGHTING SYSTEM",
       date: "Nov 2016 - Present",
       organization: "The LNM Institute of Information Technology",
-      description: "Designed an interface for fan and light so that they can be controlled from anywhere via pc connected to a network.",
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      description: "Designed an interface for fan and light so that they can be controlled from anywhere via pc connected to a network."
     },
     {
       title: "REAL-LIFE CAR SIMULATION EXPERIENCE MODULE",
@@ -94,15 +87,13 @@ const Projects = () => {
         "To experience the car driving at a spot without driving it on an actual road.",
         "Designed the model of the module and fabricated it to experience real-life car simulation.",
         "Interfaced the PC with a Logitech Racing wheel with gear and pedals along with Arduino Mega to control the motors which give jerking effects."
-      ],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      ]
     },
     {
       title: "PERFORMANCE ENHANCEMENT OF IC ENGINE BY TURBOCHARGER",
       date: "Jul 2016 - Dec 2016",
       organization: "The LNM Institute of Information Technology",
-      description: "Designed a mechanical assembly that will reheat the exhaust gases to increase different efficiencies of an Engine, reduce hydrocarbon content of engine exhaust and passed through a Turbocharger to reuse the thermal and kinetic energy of exhaust to generate electricity.",
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      description: "Designed a mechanical assembly that will reheat the exhaust gases to increase different efficiencies of an Engine, reduce hydrocarbon content of engine exhaust and passed through a Turbocharger to reuse the thermal and kinetic energy of exhaust to generate electricity."
     }
   ];
 
@@ -142,15 +133,9 @@ const Projects = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  {project.logo && (
-                    <div className="w-10 h-10 rounded overflow-hidden flex-shrink-0 border border-gray-200 dark:border-gray-700 group-hover:border-tech-blue dark:group-hover:border-tech-accent transition-colors duration-300">
-                      <img 
-                        src={project.logo} 
-                        alt={project.organization} 
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  )}
+                  <div className="w-10 h-10 rounded overflow-hidden flex-shrink-0 border border-gray-200 dark:border-gray-700 group-hover:border-tech-blue dark:group-hover:border-tech-accent transition-colors duration-300">
+                    <Bot className="w-full h-full text-tech-blue dark:text-tech-accent p-2" />
+                  </div>
                   <div>
                     <h3 className="text-xl font-semibold text-tech-darkblue dark:text-white group-hover:text-tech-blue dark:group-hover:text-tech-accent transition-colors duration-300">{project.title}</h3>
                     

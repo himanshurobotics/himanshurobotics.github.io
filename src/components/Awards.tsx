@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, Calendar, Building } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const Awards = () => {
       description: "Best paper award for paper title 'Non-linear fractional order fuzzy PD plus I controller for trajectory optimization of 6-DOF modified Puma 560 robotic arm' in the conference."
     },
     {
-      title: "Award of Excellence",
+      title: "Award of Excellence", 
       organization: "Indian Oil Corporation Limited (IOCL)",
       description: "Awarded four times for exemplary performance in high-school, intermediate, graduation and postgraduation."
     }
@@ -78,12 +77,14 @@ const Awards = () => {
                   <h3 className="text-xl font-semibold text-tech-darkblue">{item.title}</h3>
                   <p className="text-lg font-medium text-tech-blue">{item.organization}</p>
                   
-                  <div className="flex flex-wrap gap-4 mt-2 text-gray-600 text-sm">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      <span>{item.date}</span>
+                  {item.date && (
+                    <div className="flex flex-wrap gap-4 mt-2 text-gray-600 text-sm">
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        <span>{item.date}</span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   {item.description && (
                     <p className="mt-3 text-gray-700">{item.description}</p>

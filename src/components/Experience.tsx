@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Briefcase, Calendar, MapPin, Users } from 'lucide-react';
 
@@ -54,8 +53,7 @@ const Experience = () => {
       date: "Mar 2017 - Mar 2017",
       location: "Jaipur, Rajasthan, India",
       mode: "On-site",
-      description: "Lead organizer of a main event 'Impromptu Design Challenge'.",
-      logo: "/lovable-uploads/LNMIIT-Logo.png"
+      description: "Lead organizer of a main event 'Impromptu Design Challenge'."
     },
     {
       position: "Class Representative",
@@ -63,8 +61,7 @@ const Experience = () => {
       date: "Aug 2015 - Apr 2018",
       location: "Jaipur, Rajasthan, India",
       mode: "On-site",
-      description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students.",
-      logo: "/lovable-uploads/LNMIIT-Logo.png"
+      description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students."
     }
   ];
   
@@ -132,11 +129,7 @@ const Experience = () => {
             <div key={index} className="timeline-item">
               <div className="mb-6 flex items-start gap-4">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-full border border-gray-200 flex items-center justify-center overflow-hidden">
-                  {item.logo ? (
-                    <img src={item.logo} alt={item.organization} className="w-10 h-10 object-contain" />
-                  ) : (
-                    <Users className="w-6 h-6 text-tech-blue" />
-                  )}
+                  <Users className="w-6 h-6 text-tech-blue" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-tech-darkblue">{item.position}</h3>
