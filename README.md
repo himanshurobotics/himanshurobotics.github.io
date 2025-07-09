@@ -1,5 +1,14 @@
 # Welcome to your Lovable project
 
+**Himanshu Varshney**
+**Website**: https://himanshurobotics.github.io/
+
+
+
+<!--
+
+# Welcome to your Lovable project
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/89901862-f2a3-4316-a9f9-df07f191c49f
@@ -71,3 +80,5 @@ Yes it is!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+-->
