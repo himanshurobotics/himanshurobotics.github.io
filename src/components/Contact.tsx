@@ -33,6 +33,7 @@ ${formData.get('message')}
             <p className="text-gray-700 mb-8">
               For research collaborations, projects, or any questions about my work in robotics, mechatronics, control and automation.
               <br />
+              <br />
               Be professional and use e-mail if you want to connect with a hardcore robotics engineer (by birth)
             </p>
             
