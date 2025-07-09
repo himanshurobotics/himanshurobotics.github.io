@@ -34,7 +34,7 @@ const Education = () => {
         "Class Representative of Mechanical and Mechatronics Engineering Department",
         "Participated in Torque'14 and got to the final round."
       ],
-      logo: "/lovable-uploads/a117588a-e7ce-4967-80c3-2c61316471b4.png"
+      logo: "/lovable-uploads/LNMIIT-Logo.png"
     },
     {
       school: "Kendriya Vidyalaya",
@@ -42,7 +42,7 @@ const Education = () => {
       date: "2013 - 2014",
       location: "India",
       grade: "90.80%",
-      logo: "/lovable-uploads/3f3f8153-d666-432b-9b9d-b473b2053e42.png"
+      logo: "/lovable-uploads/kvs-logo.png"
     },
     {
       school: "Kendriya Vidyalaya",
@@ -50,7 +50,7 @@ const Education = () => {
       date: "2011 - 2012",
       location: "India",
       grade: "9.6 CGPA",
-      logo: "/lovable-uploads/3f3f8153-d666-432b-9b9d-b473b2053e42.png"
+      logo: "/lovable-uploads/kvs-logo.png"
     }
   ];
 
