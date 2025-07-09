@@ -125,7 +125,8 @@ const Hero = () => {
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-3 rounded-lg shadow-lg animate-pulse border border-tech-blue/20 dark:border-tech-accent/20">
                 <div className="bg-gradient-to-r from-tech-blue to-tech-darkblue dark:from-tech-accent dark:to-tech-blue text-white text-sm font-medium px-4 py-2 rounded flex items-center gap-2">
                   <Cpu className="w-4 h-4" />
-                  Senior Research Fellow 
+                  Senior Research Fellow
+                  <br />
                   @ Indian Institute of Technology Dhanbad
                 </div>
               </div>
