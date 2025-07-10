@@ -57,7 +57,13 @@ const Awards = () => {
   const referencesData = [
     {
       name: "Prof. Arun Dayal Udai",
-      title: "Doctoral supervisor"
+      title: "Doctoral supervisor",
+      organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad"
+    },
+    {
+      name: "Prof. Suril V. Shah",
+      title: "Co-author",
+      organization: "Indian Institute of Technology Jodhpur"
     }
   ];
 
