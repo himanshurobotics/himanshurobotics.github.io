@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
@@ -226,9 +225,6 @@ const Skills = () => {
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
-                    {skill.institute && (
-                      <p className="text-xs text-gray-500 mt-2">{skill.institute}</p>
-                    )}
                   </div>
                 ))}
               </div>
