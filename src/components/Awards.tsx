@@ -57,13 +57,13 @@ const Awards = () => {
   const referencesData = [
     {
       name: "Prof. Arun Dayal Udai",
-      title: "Doctoral supervisor",
-      organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad"
+      organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      title: "Doctoral supervisor"
     },
     {
       name: "Prof. Suril V. Shah",
-      title: "Co-author",
-      organization: "Indian Institute of Technology Jodhpur"
+      organization: "Indian Institute of Technology Jodhpur",
+      title: ""
     }
   ];
 
@@ -160,6 +160,7 @@ const Awards = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-tech-darkblue">{item.name}</h3>
+                  <p className="text-gray-700">{item.organization}</p>
                   <p className="text-gray-700">{item.title}</p>
                 </div>
               </div>
