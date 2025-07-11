@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Cpu, Bot, BrainCircuit, Zap, Settings, Atom, Sparkles, Orbit, Circuit, Wifi, Database } from 'lucide-react';
+import { Cpu, Bot, BrainCircuit, Zap, Settings, Atom, Sparkles, Orbit, CircuitBoard, Wifi, Database } from 'lucide-react';
 
 const AnimatedBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
