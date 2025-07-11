@@ -9,6 +9,8 @@ interface Particle {
   vy: number;
   life: number;
   maxLife: number;
+  size: number;
+  color: string;
 }
 
 const MouseFollowEffect = () => {
@@ -16,40 +18,71 @@ const MouseFollowEffect = () => {
   const [isMouseMoving, setIsMouseMoving] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [trailDots, setTrailDots] = useState<Array<{x: number, y: number, id: number}>>([]);
   const timeoutRef = useRef<NodeJS.Timeout>();
   const clickTimeoutRef = useRef<NodeJS.Timeout>();
   const particleIdRef = useRef(0);
+  const trailIdRef = useRef(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      const newPos = { x: e.clientX, y: e.clientY };
+      setMousePosition(newPos);
       setIsMouseMoving(true);
+      
+      // Add trail dots
+      setTrailDots(prev => {
+        const newDots = [...prev, { ...newPos, id: trailIdRef.current++ }];
+        return newDots.slice(-8); // Keep only last 8 dots
+      });
       
       // Clear existing timeout
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
       
-      // Set mouse as not moving after 100ms
+      // Set mouse as not moving after 150ms
       timeoutRef.current = setTimeout(() => {
         setIsMouseMoving(false);
-      }, 100);
+      }, 150);
     };
 
     const handleMouseDown = (e: MouseEvent) => {
       setIsClicking(true);
       
-      // Create click particles
+      // Create multiple types of click particles
       const newParticles: Particle[] = [];
-      for (let i = 0; i < 6; i++) {
+      const colors = ['#0e76a8', '#00bcd4', '#2196f3', '#03a9f4'];
+      
+      // Main explosion particles
+      for (let i = 0; i < 8; i++) {
+        const angle = (i / 8) * Math.PI * 2;
+        const velocity = 2 + Math.random() * 3;
         newParticles.push({
           id: particleIdRef.current++,
           x: e.clientX,
           y: e.clientY,
-          vx: (Math.random() - 0.5) * 4,
-          vy: (Math.random() - 0.5) * 4,
+          vx: Math.cos(angle) * velocity,
+          vy: Math.sin(angle) * velocity,
           life: 60,
-          maxLife: 60
+          maxLife: 60,
+          size: 2 + Math.random() * 3,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        });
+      }
+      
+      // Random burst particles
+      for (let i = 0; i < 6; i++) {
+        newParticles.push({
+          id: particleIdRef.current++,
+          x: e.clientX + (Math.random() - 0.5) * 20,
+          y: e.clientY + (Math.random() - 0.5) * 20,
+          vx: (Math.random() - 0.5) * 6,
+          vy: (Math.random() - 0.5) * 6,
+          life: 40 + Math.random() * 20,
+          maxLife: 60,
+          size: 1 + Math.random() * 2,
+          color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
       
@@ -61,15 +94,36 @@ const MouseFollowEffect = () => {
       
       clickTimeoutRef.current = setTimeout(() => {
         setIsClicking(false);
-      }, 200);
+      }, 300);
+    };
+
+    const handleMouseUp = () => {
+      // Add some sparkle particles on mouse up
+      const sparkles: Particle[] = [];
+      for (let i = 0; i < 4; i++) {
+        sparkles.push({
+          id: particleIdRef.current++,
+          x: mousePosition.x + (Math.random() - 0.5) * 30,
+          y: mousePosition.y + (Math.random() - 0.5) * 30,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          life: 30,
+          maxLife: 30,
+          size: 1,
+          color: '#00bcd4'
+        });
+      }
+      setParticles(prev => [...prev, ...sparkles]);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
@@ -77,7 +131,7 @@ const MouseFollowEffect = () => {
         clearTimeout(clickTimeoutRef.current);
       }
     };
-  }, []);
+  }, [mousePosition.x, mousePosition.y]);
 
   // Animate particles
   useEffect(() => {
@@ -87,59 +141,107 @@ const MouseFollowEffect = () => {
           ...particle,
           x: particle.x + particle.vx,
           y: particle.y + particle.vy,
+          vx: particle.vx * 0.98, // Add friction
+          vy: particle.vy * 0.98 + 0.1, // Add gravity
           life: particle.life - 1
         })).filter(particle => particle.life > 0)
       );
+
+      // Clean up old trail dots
+      setTrailDots(prev => prev.slice(-6));
     }, 16);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Main cursor glow */}
+    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+      {/* Main cursor glow effect */}
       <div
-        className="absolute w-64 h-64 rounded-full transition-all duration-300 ease-out"
+        className="absolute rounded-full transition-all duration-200 ease-out"
         style={{
-          left: mousePosition.x - 128,
-          top: mousePosition.y - 128,
-          background: `radial-gradient(circle, rgba(14, 118, 168, ${isMouseMoving ? (isClicking ? '0.2' : '0.1') : '0.05'}) 0%, rgba(14, 118, 168, 0.01) 50%, transparent 100%)`,
-          transform: `scale(${isClicking ? 1.5 : isMouseMoving ? 1.2 : 1})`,
+          left: mousePosition.x - 80,
+          top: mousePosition.y - 80,
+          width: 160,
+          height: 160,
+          background: `radial-gradient(circle, rgba(14, 118, 168, ${isMouseMoving ? (isClicking ? '0.3' : '0.15') : '0.08'}) 0%, rgba(14, 118, 168, 0.05) 40%, transparent 100%)`,
+          transform: `scale(${isClicking ? 1.8 : isMouseMoving ? 1.3 : 1})`,
         }}
       />
       
       {/* Secondary ripple effect */}
       <div
-        className="absolute w-32 h-32 rounded-full transition-all duration-500 ease-out"
+        className="absolute rounded-full transition-all duration-300 ease-out"
         style={{
-          left: mousePosition.x - 64,
-          top: mousePosition.y - 64,
-          background: `radial-gradient(circle, rgba(0, 188, 212, ${isMouseMoving ? (isClicking ? '0.15' : '0.08') : '0.03'}) 0%, transparent 70%)`,
-          transform: `scale(${isClicking ? 0.8 : isMouseMoving ? 1 : 0.8})`,
+          left: mousePosition.x - 40,
+          top: mousePosition.y - 40,
+          width: 80,
+          height: 80,
+          background: `radial-gradient(circle, rgba(0, 188, 212, ${isMouseMoving ? (isClicking ? '0.25' : '0.12') : '0.06'}) 0%, rgba(0, 188, 212, 0.02) 60%, transparent 100%)`,
+          transform: `scale(${isClicking ? 0.6 : isMouseMoving ? 1.1 : 0.9})`,
         }}
       />
       
-      {/* Click ripple effect */}
+      {/* Click ripple effects */}
       {isClicking && (
-        <div
-          className="absolute w-40 h-40 rounded-full border-2 border-tech-blue/30 dark:border-tech-accent/30 animate-ping"
-          style={{
-            left: mousePosition.x - 80,
-            top: mousePosition.y - 80,
-          }}
-        />
+        <>
+          <div
+            className="absolute rounded-full border-2 animate-ping"
+            style={{
+              left: mousePosition.x - 50,
+              top: mousePosition.y - 50,
+              width: 100,
+              height: 100,
+              borderColor: 'rgba(14, 118, 168, 0.4)',
+              animationDuration: '0.8s'
+            }}
+          />
+          <div
+            className="absolute rounded-full border-2 animate-ping"
+            style={{
+              left: mousePosition.x - 30,
+              top: mousePosition.y - 30,
+              width: 60,
+              height: 60,
+              borderColor: 'rgba(0, 188, 212, 0.6)',
+              animationDuration: '0.6s',
+              animationDelay: '0.1s'
+            }}
+          />
+        </>
       )}
       
-      {/* Floating particles that follow mouse */}
-      {[...Array(5)].map((_, i) => (
+      {/* Floating orbital particles */}
+      {[...Array(6)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-1 h-1 rounded-full bg-tech-blue/30 dark:bg-tech-accent/30 transition-all duration-1000 ease-out"
+          className="absolute rounded-full transition-all duration-1000 ease-out"
           style={{
-            left: mousePosition.x + Math.sin(Date.now() * 0.002 + i) * (60 + i * 10),
-            top: mousePosition.y + Math.cos(Date.now() * 0.002 + i) * (60 + i * 10),
+            left: mousePosition.x + Math.sin(Date.now() * 0.003 + i) * (40 + i * 15) - 2,
+            top: mousePosition.y + Math.cos(Date.now() * 0.003 + i) * (40 + i * 15) - 2,
+            width: 4,
+            height: 4,
+            backgroundColor: i % 2 === 0 ? 'rgba(14, 118, 168, 0.6)' : 'rgba(0, 188, 212, 0.6)',
+            opacity: isMouseMoving ? 0.8 : 0.4,
             animationDelay: `${i * 0.2}s`,
-            opacity: isMouseMoving ? 0.8 : 0.3,
+            boxShadow: '0 0 6px currentColor'
+          }}
+        />
+      ))}
+
+      {/* Trail dots */}
+      {trailDots.map((dot, index) => (
+        <div
+          key={dot.id}
+          className="absolute rounded-full transition-all duration-500"
+          style={{
+            left: dot.x - 3,
+            top: dot.y - 3,
+            width: 6,
+            height: 6,
+            backgroundColor: 'rgba(14, 118, 168, 0.4)',
+            opacity: (index / trailDots.length) * 0.6,
+            transform: `scale(${(index / trailDots.length) * 0.8 + 0.2})`,
           }}
         />
       ))}
@@ -148,23 +250,31 @@ const MouseFollowEffect = () => {
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute w-2 h-2 rounded-full bg-tech-blue dark:bg-tech-accent"
+          className="absolute rounded-full"
           style={{
-            left: particle.x - 4,
-            top: particle.y - 4,
-            opacity: particle.life / particle.maxLife,
+            left: particle.x - particle.size / 2,
+            top: particle.y - particle.size / 2,
+            width: particle.size,
+            height: particle.size,
+            backgroundColor: particle.color,
+            opacity: (particle.life / particle.maxLife) * 0.9,
             transform: `scale(${particle.life / particle.maxLife})`,
+            boxShadow: `0 0 ${particle.size * 2}px ${particle.color}`
           }}
         />
       ))}
 
-      {/* Trailing dots */}
+      {/* Center dot */}
       <div
-        className="absolute w-3 h-3 rounded-full bg-tech-blue/20 dark:bg-tech-accent/20 transition-all duration-200"
+        className="absolute rounded-full transition-all duration-200"
         style={{
-          left: mousePosition.x - 6,
-          top: mousePosition.y - 6,
-          transform: `scale(${isMouseMoving ? 1 : 0.5})`,
+          left: mousePosition.x - 4,
+          top: mousePosition.y - 4,
+          width: 8,
+          height: 8,
+          backgroundColor: isClicking ? 'rgba(0, 188, 212, 0.8)' : 'rgba(14, 118, 168, 0.6)',
+          transform: `scale(${isClicking ? 1.5 : isMouseMoving ? 1.2 : 1})`,
+          boxShadow: '0 0 10px currentColor'
         }}
       />
     </div>
