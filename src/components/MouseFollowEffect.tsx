@@ -23,6 +23,8 @@ const MouseFollowEffect = () => {
   const clickTimeoutRef = useRef<NodeJS.Timeout>();
   const particleIdRef = useRef(0);
   const trailIdRef = useRef(0);
+  const animationFrameRef = useRef<number>();
+  const lastUpdateTime = useRef(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -30,11 +32,13 @@ const MouseFollowEffect = () => {
       setMousePosition(newPos);
       setIsMouseMoving(true);
       
-      // Add trail dots
-      setTrailDots(prev => {
-        const newDots = [...prev, { ...newPos, id: trailIdRef.current++ }];
-        return newDots.slice(-8); // Keep only last 8 dots
-      });
+      // Add trail dots (less frequently)
+      if (Math.random() > 0.7) {
+        setTrailDots(prev => {
+          const newDots = [...prev, { ...newPos, id: trailIdRef.current++ }];
+          return newDots.slice(-5); // Keep only last 5 dots
+        });
+      }
       
       // Clear existing timeout
       if (timeoutRef.current) {
@@ -54,8 +58,8 @@ const MouseFollowEffect = () => {
       const newParticles: Particle[] = [];
       const colors = ['#0e76a8', '#00bcd4', '#2196f3', '#03a9f4'];
       
-      // Main explosion particles
-      for (let i = 0; i < 8; i++) {
+      // Main explosion particles (reduced count)
+      for (let i = 0; i < 5; i++) {
         const angle = (i / 8) * Math.PI * 2;
         const velocity = 2 + Math.random() * 3;
         newParticles.push({
@@ -71,8 +75,8 @@ const MouseFollowEffect = () => {
         });
       }
       
-      // Random burst particles
-      for (let i = 0; i < 6; i++) {
+      // Random burst particles (reduced count)
+      for (let i = 0; i < 3; i++) {
         newParticles.push({
           id: particleIdRef.current++,
           x: e.clientX + (Math.random() - 0.5) * 20,
@@ -98,9 +102,9 @@ const MouseFollowEffect = () => {
     };
 
     const handleMouseUp = () => {
-      // Add some sparkle particles on mouse up
+      // Add some sparkle particles on mouse up (reduced count)
       const sparkles: Particle[] = [];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 2; i++) {
         sparkles.push({
           id: particleIdRef.current++,
           x: mousePosition.x + (Math.random() - 0.5) * 30,
@@ -131,27 +135,39 @@ const MouseFollowEffect = () => {
         clearTimeout(clickTimeoutRef.current);
       }
     };
-  }, [mousePosition.x, mousePosition.y]);
+  }, []);
 
-  // Animate particles
+  // Animate particles with requestAnimationFrame for better performance
   useEffect(() => {
-    const interval = setInterval(() => {
-      setParticles(prev => 
-        prev.map(particle => ({
-          ...particle,
-          x: particle.x + particle.vx,
-          y: particle.y + particle.vy,
-          vx: particle.vx * 0.98, // Add friction
-          vy: particle.vy * 0.98 + 0.1, // Add gravity
-          life: particle.life - 1
-        })).filter(particle => particle.life > 0)
-      );
+    const animate = (currentTime: number) => {
+      // Throttle updates to ~30fps for better performance
+      if (currentTime - lastUpdateTime.current >= 33) {
+        setParticles(prev => 
+          prev.map(particle => ({
+            ...particle,
+            x: particle.x + particle.vx,
+            y: particle.y + particle.vy,
+            vx: particle.vx * 0.98, // Add friction
+            vy: particle.vy * 0.98 + 0.1, // Add gravity
+            life: particle.life - 1
+          })).filter(particle => particle.life > 0)
+        );
 
-      // Clean up old trail dots
-      setTrailDots(prev => prev.slice(-6));
-    }, 16);
+        // Clean up old trail dots less frequently
+        setTrailDots(prev => prev.slice(-4));
+        lastUpdateTime.current = currentTime;
+      }
+      
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
 
-    return () => clearInterval(interval);
+    animationFrameRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -211,8 +227,8 @@ const MouseFollowEffect = () => {
         </>
       )}
       
-      {/* Floating orbital particles */}
-      {[...Array(6)].map((_, i) => (
+      {/* Floating orbital particles (reduced count) */}
+      {[...Array(3)].map((_, i) => (
         <div
           key={i}
           className="absolute rounded-full transition-all duration-1000 ease-out"
