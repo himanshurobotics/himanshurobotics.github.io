@@ -11,7 +11,7 @@ const Publications = () => {
     },
     {
       title: "Adaptive Impedance Control for Synchronized and Compliant Manipulation in the Dual 7-DoF Arms Robot",
-      publication: "Advances in Robotics (AIR) 2025 (ACM)",
+      publication: "Advances in Robotics (AIR) 2025",
       date: "July 2nd-5th, 2025",
       description: "Impedance control framework for dual 7-DoF humanoid arms that achieves synchronized motion and compliant adaptability against unknown environmental forces. Simulation results validate the framework's ability to ensure robust trajectory tracking and stable interaction within dynamic environments."
     },
