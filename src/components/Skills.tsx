@@ -196,19 +196,22 @@ const Skills = () => {
         
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
-            <div className="flex justify-center mb-8 overflow-x-auto">
-              <TabsList className="bg-gray-200">
-                {skillCategories.map(category => (
-                  <TabsTrigger 
-                    key={category.id} 
-                    value={category.id}
-                    className="data-[state=active]:bg-tech-blue data-[state=active]:text-white flex items-center gap-2"
-                  >
-                    {category.icon}
-                    {category.name}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
+            <div className="mb-8">
+              <div className="overflow-x-auto scrollbar-hide">
+                <TabsList className="bg-gray-200 inline-flex w-max min-w-full justify-start md:justify-center p-1">
+                  {skillCategories.map(category => (
+                    <TabsTrigger 
+                      key={category.id} 
+                      value={category.id}
+                      className="data-[state=active]:bg-tech-blue data-[state=active]:text-white flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 text-xs md:text-sm whitespace-nowrap flex-shrink-0"
+                    >
+                      <span className="flex-shrink-0">{category.icon}</span>
+                      <span className="hidden sm:inline">{category.name}</span>
+                      <span className="sm:hidden">{category.name.split(' ')[0]}</span>
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
             </div>
             
             <TabsContent value={activeTab} className="mt-0">
