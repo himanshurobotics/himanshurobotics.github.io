@@ -4,7 +4,31 @@ import { Briefcase, Calendar, MapPin, Users } from 'lucide-react';
 const Experience = () => {
   const experienceData = [
     {
-      position: "Senior Research Fellow",
+      position: "Teaching Assistant (TA) NPTEL",
+      company: "Collaborative Robots (COBOTS): Theory and Practice",
+      date: "Jan 2026 - May 2026",
+      location: "IIT (ISM) Dhanbad, Jharkhand, India",
+      description: "Made course content, lecture notes, assignments and question papers.",
+      logo: "/lovable-uploads/nptel-logo.png"
+    },
+    {
+      position: "Teaching Assistant (TA) NPTEL",
+      company: "Collaborative Robots (COBOTS): Theory and Practice",
+      date: "Jan 2025 - May 2025",
+      location: "IIT (ISM) Dhanbad, Jharkhand, India",
+      description: "New course launched. Made course content, simulation and experimental videos, lecture notes, assignments and question papers.",
+      logo: "/lovable-uploads/nptel-logo.png"
+    },
+    {
+      position: "Teaching Assistant (TA) NPTEL",
+      company: "Industrial Robotics : Theories For Implementation",
+      date: "Jul 2024 - Nov 2024",
+      location: "IIT (ISM) Dhanbad, Jharkhand, India",
+      description: "Made course content, lecture notes, assignments and question papers.",
+      logo: "/lovable-uploads/nptel-logo.png"
+    },
+    {
+      position: "Senior Research Fellow (SRF)",
       company: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       type: "Full-time",
       date: "Aug 2023 - Present",
@@ -15,7 +39,7 @@ const Experience = () => {
       logo: "/lovable-uploads/iitismlogo.png"
     },
     {
-      position: "Junior Research Fellow",
+      position: "Junior Research Fellow (JRF)",
       company: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       type: "Full-time",
       date: "Aug 2021 - July 2023 · 2 years",
@@ -26,7 +50,7 @@ const Experience = () => {
       logo: "/lovable-uploads/iitismlogo.png"
     },
     {
-      position: "Teaching Assistant",
+      position: "Teaching Assistant (TA)",
       company: "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
       type: "Full-time",
       date: "Aug 2019 - Jul 2021 · 2 years",
