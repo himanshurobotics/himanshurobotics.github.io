@@ -9,7 +9,6 @@ import Publications from '@/components/Publications';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Awards from '@/components/Awards';
-import Certificates from '@/components/Certificates';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -31,7 +30,6 @@ const Index = () => {
         <Skills />
         <Projects />
         <Awards />
-        <Certificates />
         <Contact />
         <Footer />
       </div>
