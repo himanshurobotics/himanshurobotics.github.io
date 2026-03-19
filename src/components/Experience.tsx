@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Briefcase, Calendar, MapPin, Users } from 'lucide-react';
+import wallpaperExperience from '@/assets/wallpaper-experience.jpg';
 
 const Experience = () => {
   const experienceData = [
@@ -69,7 +71,7 @@ const Experience = () => {
       logo: "/lovable-uploads/Indian_Oil_Logo.png"
     }
   ];
-  
+
   const volunteerData = [
     {
       position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
@@ -88,55 +90,62 @@ const Experience = () => {
       description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students."
     }
   ];
-  
+
   return (
-    <section id="experience" className="bg-white py-20">
-      <div className="section-container">
-        <h2 className="section-title text-center">Work Experience</h2>
-        
+    <section id="experience" className="relative py-20 overflow-hidden">
+      {/* Wallpaper */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${wallpaperExperience})` }}
+      />
+      <div className="absolute inset-0 bg-black/80 dark:bg-black/85" />
+      <div className="absolute inset-0 bg-[url('./circuit-pattern.svg')] bg-repeat opacity-5" />
+
+      <div className="section-container relative z-10">
+        <div className="flex items-center justify-center mb-10 animate-fade-in">
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mx-4 text-white">Work Experience</h2>
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+        </div>
+
         <div className="max-w-3xl mx-auto">
           {experienceData.map((item, index) => (
-            <div key={index} className="timeline-item">
-              <div className="mb-6 flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-white rounded-full border border-gray-200 flex items-center justify-center overflow-hidden">
+            <div key={index} className="relative pl-8 pb-8 border-l border-tech-accent/40 hover:border-tech-accent transition-all duration-500 last:border-0">
+              <div className="absolute w-4 h-4 bg-tech-accent rounded-full -left-2 mt-1 transition-all duration-500" style={{ boxShadow: '0 0 15px rgba(0,188,212,0.6)' }}></div>
+              <div className="mb-6 flex items-start gap-4 bg-black/50 backdrop-blur-md p-5 rounded-lg border border-tech-accent/20 hover:border-tech-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-tech-accent/10">
+                <div className="w-12 h-12 shrink-0 bg-white/90 rounded-full border border-tech-accent/30 flex items-center justify-center overflow-hidden">
                   {item.logo ? (
                     <img src={item.logo} alt={item.company} className="w-10 h-10 object-contain" />
                   ) : (
-                    <Briefcase className="w-6 h-6 text-tech-blue" />
+                    <Briefcase className="w-6 h-6 text-tech-accent" />
                   )}
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-tech-darkblue">{item.position}</h3>
-                  <p className="text-lg font-medium text-tech-blue">{item.company}</p>
-                  
-                  {item.type && <p className="text-gray-700">{item.type}</p>}
-                  
-                  <div className="flex flex-wrap gap-4 mt-2 text-gray-600 text-sm">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">{item.position}</h3>
+                  <p className="text-lg font-medium text-tech-accent">{item.company}</p>
+                  {item.type && <p className="text-gray-400">{item.type}</p>}
+                  <div className="flex flex-wrap gap-4 mt-2 text-gray-400 text-sm">
                     <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
+                      <Calendar className="w-4 h-4 mr-1 text-tech-accent/70" />
                       <span>{item.date}</span>
                     </div>
                     {item.location && (
                       <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
+                        <MapPin className="w-4 h-4 mr-1 text-tech-accent/70" />
                         <span>{item.location}</span>
                       </div>
                     )}
-                    {item.mode && (
-                      <div className="flex items-center">
-                        <span>{item.mode}</span>
-                      </div>
-                    )}
+                    {item.mode && <span className="text-gray-400">{item.mode}</span>}
                   </div>
-                  
                   {item.description && (
-                    <p className="mt-3 text-gray-700">{item.description}</p>
+                    <p className="mt-3 text-gray-300">{item.description}</p>
                   )}
-                  
                   {item.skills && (
                     <div className="mt-3 flex flex-wrap gap-2">
                       {item.skills.map((skill, idx) => (
-                        <span key={idx} className="skill-tag">{skill}</span>
+                        <span key={idx} className="px-3 py-1 bg-tech-accent/10 text-tech-accent rounded-full text-sm font-medium border border-tech-accent/30 hover:bg-tech-accent/20 transition-all duration-300">
+                          {skill}
+                        </span>
                       ))}
                     </div>
                   )}
@@ -145,29 +154,32 @@ const Experience = () => {
             </div>
           ))}
         </div>
-        
-        <h2 className="section-title text-center mt-16">Volunteer Experience</h2>
-        
+
+        <div className="flex items-center justify-center mt-16 mb-10 animate-fade-in">
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mx-4 text-white">Volunteer Experience</h2>
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+        </div>
+
         <div className="max-w-3xl mx-auto">
           {volunteerData.map((item, index) => (
-            <div key={index} className="timeline-item">
-              <div className="mb-6 flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-white rounded-full border border-gray-200 flex items-center justify-center overflow-hidden">
-                  <Users className="w-6 h-6 text-tech-blue" />
+            <div key={index} className="relative pl-8 pb-8 border-l border-tech-accent/40 hover:border-tech-accent transition-all duration-500 last:border-0">
+              <div className="absolute w-4 h-4 bg-tech-accent rounded-full -left-2 mt-1 transition-all duration-500" style={{ boxShadow: '0 0 15px rgba(0,188,212,0.6)' }}></div>
+              <div className="mb-6 flex items-start gap-4 bg-black/50 backdrop-blur-md p-5 rounded-lg border border-tech-accent/20 hover:border-tech-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-tech-accent/10">
+                <div className="w-12 h-12 shrink-0 bg-white/10 rounded-full border border-tech-accent/30 flex items-center justify-center overflow-hidden">
+                  <Users className="w-6 h-6 text-tech-accent" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-tech-darkblue">{item.position}</h3>
-                  <p className="text-lg font-medium text-tech-blue">{item.organization}</p>
-                  
-                  <div className="flex flex-wrap gap-4 mt-2 text-gray-600 text-sm">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">{item.position}</h3>
+                  <p className="text-lg font-medium text-tech-accent">{item.organization}</p>
+                  <div className="flex flex-wrap gap-4 mt-2 text-gray-400 text-sm">
                     <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
+                      <Calendar className="w-4 h-4 mr-1 text-tech-accent/70" />
                       <span>{item.date}</span>
                     </div>
                   </div>
-                  
                   {item.description && (
-                    <p className="mt-3 text-gray-700">{item.description}</p>
+                    <p className="mt-3 text-gray-300">{item.description}</p>
                   )}
                 </div>
               </div>
