@@ -1,5 +1,7 @@
+
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Calendar, BookOpen } from 'lucide-react';
+import wallpaperPublications from '@/assets/wallpaper-publications.jpg';
 
 const Publications = () => {
   const publicationsData = [
@@ -30,32 +32,44 @@ const Publications = () => {
   ];
 
   return (
-    <section id="publications" className="bg-white dark:bg-gray-900 py-20 transition-colors duration-500">
-      <div className="section-container">
-        <h2 className="section-title text-center">Publications</h2>
-        
-        <div className="max-w-3xl mx-auto">
+    <section id="publications" className="relative py-20 overflow-hidden">
+      {/* Wallpaper */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${wallpaperPublications})` }}
+      />
+      <div className="absolute inset-0 bg-black/80 dark:bg-black/85" />
+      <div className="absolute inset-0 bg-[url('./circuit-pattern.svg')] bg-repeat opacity-5" />
+
+      <div className="section-container relative z-10">
+        <div className="flex items-center justify-center mb-10 animate-fade-in">
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mx-4 text-white">Publications</h2>
+          <div className="h-0.5 w-10 bg-tech-accent"></div>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-6">
           {publicationsData.map((item, index) => (
-            <div key={index} className="mb-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 shrink-0 bg-gray-50 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-colors duration-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-tech-blue dark:text-tech-accent" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-tech-darkblue dark:text-white transition-colors duration-500">{item.title}</h3>
-                  <p className="text-lg font-medium text-tech-blue dark:text-tech-accent transition-colors duration-500">{item.publication}</p>
-                  
-                  <div className="flex flex-wrap gap-4 mt-2 text-gray-600 dark:text-gray-400 text-sm transition-colors duration-500">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      <span>{item.date}</span>
-                    </div>
+            <div
+              key={index}
+              className="flex items-start gap-4 bg-black/50 backdrop-blur-md p-6 rounded-lg border border-tech-accent/20 hover:border-tech-accent/60 transition-all duration-300 hover:shadow-lg hover:shadow-tech-accent/10 animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="w-12 h-12 shrink-0 bg-tech-accent/10 rounded-full border border-tech-accent/30 flex items-center justify-center">
+                <BookOpen className="w-6 h-6 text-tech-accent" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                <p className="text-lg font-medium text-tech-accent mt-1">{item.publication}</p>
+                <div className="flex flex-wrap gap-4 mt-2 text-gray-400 text-sm">
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-1 text-tech-accent/70" />
+                    <span>{item.date}</span>
                   </div>
-                  
-                  {item.description && (
-                    <p className="mt-3 text-gray-700 dark:text-gray-300 transition-colors duration-500">{item.description}</p>
-                  )}
                 </div>
+                {item.description && (
+                  <p className="mt-3 text-gray-300">{item.description}</p>
+                )}
               </div>
             </div>
           ))}
