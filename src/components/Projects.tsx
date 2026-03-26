@@ -26,9 +26,11 @@ const Projects = () => {
       description: "Designed, manufactured and assembled an industry-grade 6-RSS parallel manipulator. Developed an industry-grade controller along with an application.",
       points: [
         "Parallel robot",
-        "Beckhoff",
-        "Python Beckhoff-ADS",
-        "Beckhoff-TwinCAT"
+        "Beckhoff-PLC",
+        "Beckhoff-ADS",
+        "Beckhoff-TwinCAT",
+        "Beckhoff-Automation Interface",
+        "Beckhoff-Visualization (HMI)"
       ]
     },
     {
@@ -38,8 +40,7 @@ const Projects = () => {
       description: "Arithematics for model order reduction of interval systems are very time-consuming and sometimes become very complex to solve. Made the Interval Systems Arithmetic Calculator in Python with GUI.",
       points: [
         "Model order reduction",
-        "Inverval systems",
-        "Control systems"
+        "Higher-order control systems with interval uncertainties"
       ]
     },
     {
@@ -56,7 +57,8 @@ const Projects = () => {
       description: "A cheap wirelessly remote-controlled, wheeled device to enable video streaming to view remote locations.",
       points: [
         "The project consists of a smart-phone in dual screen mode to experience real-time video broadcast as well as to control 4 wheeled robotic vehicle with camera motion simultaneously via Wi-Fi which receives data processed by Arduino and Raspberry Pi.",
-        "Video streamed is done by the smart-phone using the IP address specified by the Raspberry Pi."
+        "Video streamed is done by the smart-phone using the IP address specified by the Raspberry Pi.",
+        "Object detection and collision avoidance."
       ],
       skills: [
         "Mechatronics",
@@ -74,23 +76,23 @@ const Projects = () => {
       ]
     },
     {
-      title: "AUTOMATIC FAN AND LIGHTING SYSTEM",
+      title: "Automatic Fan and Lighting System",
       date: "Nov 2016 - Present",
       organization: "The LNM Institute of Information Technology",
       description: "Designed an interface for fan and light so that they can be controlled from anywhere via pc connected to a network."
     },
     {
-      title: "REAL-LIFE CAR SIMULATION EXPERIENCE MODULE",
+      title: "Real-Life Terrain Experience Simulation Module",
       date: "Nov 2017 - Jan 2018",
       organization: "The LNM Institute of Information Technology",
       points: [
         "To experience the car driving at a spot without driving it on an actual road.",
         "Designed the model of the module and fabricated it to experience real-life car simulation.",
-        "Interfaced the PC with a Logitech Racing wheel with gear and pedals along with Arduino Mega to control the motors which give jerking effects."
+        "Interfaced of a Logitech Racing wheel with gear and pedals with Arduino Mega to control the motors which give jerking effects."
       ]
     },
     {
-      title: "PERFORMANCE ENHANCEMENT OF IC ENGINE BY TURBOCHARGER",
+      title: "Performance Enhancement of IC Engine by TURBOCHARGER",
       date: "Jul 2016 - Dec 2016",
       organization: "The LNM Institute of Information Technology",
       description: "Designed a mechanical assembly that will reheat the exhaust gases to increase different efficiencies of an Engine, reduce hydrocarbon content of engine exhaust and passed through a Turbocharger to reuse the thermal and kinetic energy of exhaust to generate electricity."
