@@ -19,7 +19,7 @@ const About = () => {
     { 
       title: "Programming", 
       icon: <Code className="w-10 h-10 text-tech-blue dark:text-tech-accent" />,
-      desc: "Python, C++, C, MATLAB, AI/ML, Embedded-C, Assembly" 
+      desc: "Python, C++, C, EtherCAT, MATLAB, AI/ML, Embedded-C, Assembly" 
     },
     { 
       title: "Software", 
