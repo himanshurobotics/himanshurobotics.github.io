@@ -89,6 +89,7 @@ const Footer = () => {
               <button onClick={() => scrollToSection('home')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Home</button>
               <button onClick={() => scrollToSection('about')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">About</button>
               <button onClick={() => scrollToSection('education')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Education</button>
+              <button onClick={() => scrollToSection('publications')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Publications</button>
               <button onClick={() => scrollToSection('experience')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Experience</button>
               <button onClick={() => scrollToSection('skills')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Skills</button>
               <button onClick={() => scrollToSection('projects')} className="px-4 py-2 hover:text-tech-blue dark:hover:text-tech-accent transition-colors cursor-pointer">Projects</button>
