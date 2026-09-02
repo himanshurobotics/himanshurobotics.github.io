@@ -90,7 +90,7 @@ const Experience = () => {
   ];
   
   return (
-    <section id="experience" className="bg-white py-20">
+    <section id="experience" className="py-12">
       <div className="section-container">
         <h2 className="section-title text-center">Work Experience</h2>
         

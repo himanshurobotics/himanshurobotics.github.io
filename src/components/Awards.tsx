@@ -53,7 +53,7 @@ const Awards = () => {
   ];
 
   return (
-    <section id="awards" className="bg-white dark:bg-gray-900 py-20 transition-colors duration-500">
+    <section id="awards" className="py-12">
       <div className="section-container">
         <h2 className="section-title text-center">Awards & Recognition</h2>
         
