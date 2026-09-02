@@ -22,7 +22,7 @@ ${formData.get('message')}
   };
 
   return (
-    <section id="contact" className="bg-tech-lightblue py-20">
+    <section id="contact" className="py-12">
       <div className="section-container">
         <h2 className="section-title text-center">Get In Touch</h2>
         

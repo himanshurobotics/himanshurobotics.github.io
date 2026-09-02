@@ -59,7 +59,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-white dark:bg-gray-900 py-20 relative overflow-hidden">
+    <section id="about" className="py-12 relative overflow-hidden">
       {/* Technical Background Elements - Circuit Pattern */}
       <div className="absolute inset-0 bg-[url('./circuit-pattern.svg')] bg-repeat opacity-5 dark:opacity-10"></div>
       <div className="absolute inset-0 bg-[url('./robot-pattern.svg')] bg-repeat opacity-3 dark:opacity-5"></div>
