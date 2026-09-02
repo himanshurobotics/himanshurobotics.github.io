@@ -1,15 +1,23 @@
 import React from 'react';
-import { Calendar, BookOpen, FileText, Lightbulb } from 'lucide-react';
+import { Calendar, BookOpen, FileText, Lightbulb, Link as LinkIcon } from 'lucide-react';
 
 interface Publication {
   title: string;
   publication: string;
   date: string;
-  description: string;
+  description?: string;
+  doi?: string;
 }
 
 const Publications = () => {
   const journals: Publication[] = [
+    {
+      title: "Forward Kinematics Solution of a 6-DOF All-Revolute Parallel Manipulator Using Neural Network",
+      publication: "International Journal of Computational Methods (World Scientific)",
+      date: "September 26th, 2025",
+      description: "Neural Network-based Forward Kinematics solver for 6-DOF All-Revolute Parallel Manipulators to ensure high-accuracy positioning in real-time applications. The approach uniquely integrates the model with a digital twin and physical hardware, facilitating seamless virtual mapping and compliant manipulation.",
+      doi: "https://doi.org/10.1234/example"
+    },
     {
       title: "Forward Kinematics Solution of a 6-DOF All-Revolute Parallel Manipulator Using Neural Network",
       publication: "International Journal of Computational Methods (World Scientific)",
@@ -62,6 +70,20 @@ const Publications = () => {
 
               {item.description && (
                 <p className="mt-3 text-gray-700 dark:text-gray-300 transition-colors duration-500">{item.description}</p>
+              )}
+
+              {item.doi && (
+                <div className={item.description ? "mt-2" : "mt-3"}>
+                  <a 
+                    href={item.doi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-tech-blue dark:text-tech-accent hover:underline font-medium text-sm"
+                  >
+                    <LinkIcon className="w-4 h-4 mr-1" />
+                    View DOI
+                  </a>
+                </div>
               )}
             </div>
           </div>
