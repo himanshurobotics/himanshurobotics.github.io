@@ -32,7 +32,7 @@ const Navbar = () => {
       }
 
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'education', 'experience', 'publications', 'skills', 'projects', 'awards', 'contact'];
+      const sections = ['home', 'about', 'education', 'publications', 'experience', 'skills', 'projects', 'awards', 'contact'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -57,8 +57,8 @@ const Navbar = () => {
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Education', href: '#education', id: 'education' },
-    { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Publications', href: '#publications', id: 'publications' },
+    { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Skills', href: '#skills', id: 'skills' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Awards', href: '#awards', id: 'awards' },
