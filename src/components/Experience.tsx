@@ -72,9 +72,17 @@ const Experience = () => {
   
   const volunteerData = [
     {
+      position: "Organizing Committee Member - IPRoMM 2026",
+      organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      date: "August 2022 - December 2022",
+      location: "Dhanbad, Jharkhand, India",
+      mode: "On-site",
+      description: "Lead the organizing committee for the 2nd International Conference on Industrial Robotics and Mechatronics (IPRoMM 2026) held at IIT (ISM) Dhanbad, India."
+    },
+    {
       position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
       organization: "The LNM Institute of Information Technology",
-      date: "Mar 2017 - Mar 2017",
+      date: "March 2017",
       location: "Jaipur, Rajasthan, India",
       mode: "On-site",
       description: "Lead organizer of a main event 'Impromptu Design Challenge'."
@@ -82,7 +90,7 @@ const Experience = () => {
     {
       position: "Class Representative",
       organization: "The LNM Institute of Information Technology",
-      date: "Aug 2015 - Apr 2018",
+      date: "August 2015 - April 2018",
       location: "Jaipur, Rajasthan, India",
       mode: "On-site",
       description: "Served as the Class Representative for the Mechanical and Mechatronics Engineering Department, facilitating communication between faculty and students."
