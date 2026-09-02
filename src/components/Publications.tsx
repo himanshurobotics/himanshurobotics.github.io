@@ -20,7 +20,7 @@ const Publications = () => {
       title: "Framework for implementing and investigating sensorless force control for collaborative manipulation using parallel robots",
       publication: "Multibody System Dynamics (Springer)",
       date: "June 30th, 2025",
-      description: "Implementing and evaluating indirect force control strategies (impedance and admittance control) for all revolute parallel manipulators to ensure safe and efficient human-robot interaction by mitigating high interaction forces while maintaining their inherent benefits like high accuracy, stiffness and backdrivability."
+      description: "https://doi.org/10.1007/s11044-025-10090-0"
     }
   ];
 
