@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="flex flex-col space-y-6 animate-fade-in">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-tech-blue dark:bg-tech-accent rounded-full animate-pulse"></div>
-              <h2 className="text-2xl font-medium text-tech-blue dark:text-tech-accent">Hello, I'm a Robotics Engineer</h2>
+              <h2 className="text-2xl font-medium text-tech-blue dark:text-tech-accent">Hello, I'm a Researcher in Robotics</h2>
               <Bot className="w-6 h-6 text-tech-blue dark:text-tech-accent animate-pulse" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-tech-darkblue dark:text-white tech-gradient">
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="flex items-center space-x-2">
               <Cpu className="w-6 h-6 text-tech-blue dark:text-tech-accent" />
               <p className="text-xl text-gray-600 dark:text-gray-300 font-semibold">
-                Ph.D. Research Scholar | Robotics & AI Specialist
+                Ph.D. Research Scholar | Human-Robot Interaction| Robotics & AI Specialist
               </p>
             </div>
             <div className="bg-gradient-to-r from-tech-blue/10 to-transparent dark:from-tech-accent/10 p-4 rounded-lg border-l-4 border-tech-blue dark:border-tech-accent">
