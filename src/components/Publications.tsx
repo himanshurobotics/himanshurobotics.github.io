@@ -12,42 +12,69 @@ interface Publication {
 const Publications = () => {
   const journals: Publication[] = [
     {
-      title: "Forward Kinematics Solution of a 6-DOF All-Revolute Parallel Manipulator Using Neural Network",
-      publication: "International Journal of Computational Methods (World Scientific)",
+      title: "Unconventional active head limb grasping in a humanoid robot using fuzzy logic and Q-learning",
+      publication: "Autonomous Robots (Springer)",
       date: "September 26th, 2025",
-      description: "Neural Network-based Forward Kinematics solver for 6-DOF All-Revolute Parallel Manipulators to ensure high-accuracy positioning in real-time applications. The approach uniquely integrates the model with a digital twin and physical hardware, facilitating seamless virtual mapping and compliant manipulation.",
-      doi: "https://doi.org/10.1234/example"
+      description: "Under review"
     },
     {
       title: "Forward Kinematics Solution of a 6-DOF All-Revolute Parallel Manipulator Using Neural Network",
       publication: "International Journal of Computational Methods (World Scientific)",
       date: "September 26th, 2025",
-      description: "Neural Network-based Forward Kinematics solver for 6-DOF All-Revolute Parallel Manipulators to ensure high-accuracy positioning in real-time applications. The approach uniquely integrates the model with a digital twin and physical hardware, facilitating seamless virtual mapping and compliant manipulation."
+      doi: "https://doi.org/10.1142/S0219876225500549",
+      //description: "Neural Network-based Forward Kinematics solver for 6-DOF All-Revolute Parallel Manipulators to ensure high-accuracy positioning in real-time applications. The approach uniquely integrates the model with a digital twin and physical hardware, facilitating seamless virtual mapping and compliant manipulation."
     },
     {
       title: "Framework for implementing and investigating sensorless force control for collaborative manipulation using parallel robots",
       publication: "Multibody System Dynamics (Springer)",
       date: "June 30th, 2025",
-      description: "Implementing and evaluating indirect force control strategies (impedance and admittance control) for all revolute parallel manipulators to ensure safe and efficient human-robot interaction by mitigating high interaction forces while maintaining their inherent benefits like high accuracy, stiffness and backdrivability."
+      doi: "https://doi.org/10.1007/S11044-025-10090-0",
+      //description: "Implementing and evaluating indirect force control strategies (impedance and admittance control) for all revolute parallel manipulators to ensure safe and efficient human-robot interaction by mitigating high interaction forces while maintaining their inherent benefits like high accuracy, stiffness and backdrivability."
     }
   ];
 
   const conferences: Publication[] = [
     {
+      title: "Dynamic Uncertainties Modelling Using Physics-Aware Gaussian Process Regression for Impedance Control of Parallel Manipulators",
+      publication: "35th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN 2026)",
+      date: "August 24th-28th, 2026",
+      description: "Forthcoming in proceeding"
+    },
+    {
+      title: "Design and Fabrication of a 6-DoF Parallel Motion Simulator Platform",
+      publication: "20th Symposium on National Frontiers of Engineering (NatFoE 2026)",
+      date: "August 8th-10th, 2026",
+      description: "Forthcoming in proceeding"
+    },
+    {
       title: "Adaptive Impedance Control for Synchronized and Compliant Manipulation in the Dual 7-DoF Arms Robot",
-      publication: "Advances in Robotics (AIR) 2025 (ACM)",
+      publication: "Proceedings of the 2025 7th International Conference on Advances in Robotics (ACM)",
       date: "July 2nd-5th, 2025",
-      description: "Impedance control framework for dual 7-DoF humanoid arms that achieves synchronized motion and compliant adaptability against unknown environmental forces. Simulation results validate the framework's ability to ensure robust trajectory tracking and stable interaction within dynamic environments."
+      doi: "https://doi.org/10.1145/3787370.3787514",
+      // description: "Impedance control framework for dual 7-DoF humanoid arms that achieves synchronized motion and compliant adaptability against unknown environmental forces. Simulation results validate the framework's ability to ensure robust trajectory tracking and stable interaction within dynamic environments."
     },
     {
       title: "Non-linear fractional order fuzzy PD plus I controller for trajectory optimization of 6-DOF modified Puma 560 robotic arm",
       publication: "Proceedings of Congress on Control, Robotics, and Mechatronics (CRM) 2023. Book: Smart Innovation, Systems and Technologies (Springer)",
       date: "November 11th, 2023",
-      description: "Employed the non-integer order calculus to enhance the control action of the non-linear fractional order fuzzy PD plus I (FOFPD+I) controller to control a serial robotic arm."
+      doi: "https://doi.org/10.1007/978-981-99-5180-2_33",
+      // description: "Employed the non-integer order calculus to enhance the control action of the non-linear fractional order fuzzy PD plus I (FOFPD+I) controller to control a serial robotic arm."
     }
   ];
 
-  const patents: Publication[] = [];
+  const patents: Publication[] = [
+    {
+      title: "A Cyber Physical System Retrofit for MR Finishing of Internal Hollow Cylindrical Surfaces with Real Time Monitoring and Control",
+      publication: "Granted",
+      date: "December 10th, 2025"
+    },
+    {
+      title: "A Variable Stiffness Adapter for a Compliant Robot-Assisted Assembly Utilizing Electromagnetic Actuation to Adjust Stiffness and Compliance",
+      publication: "Published",
+      date: "March 27th, 2025",
+      description: "Under Examication"
+    }
+  ];
 
   const renderList = (items: Publication[]) => (
     <div>
@@ -81,7 +108,7 @@ const Publications = () => {
                     className="inline-flex items-center text-tech-blue dark:text-tech-accent hover:underline font-medium text-sm"
                   >
                     <LinkIcon className="w-4 h-4 mr-1" />
-                    View DOI
+                    DOI
                   </a>
                 </div>
               )}
@@ -118,15 +145,7 @@ const Publications = () => {
           {renderList(conferences)}
 
           {renderHeading(Lightbulb, 'Patents', patents.length)}
-          {patents.length === 0 ? (
-            <div className="text-center py-8 rounded-2xl border border-dashed border-gray-300 dark:border-gray-700">
-              <Lightbulb className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-500" />
-              <p className="text-gray-500 dark:text-gray-400 font-medium">No patents filed yet.</p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">Work in progress — updates coming soon.</p>
-            </div>
-          ) : (
-            renderList(patents)
-          )}
+          {renderList(patents)}
         </div>
       </div>
     </section>
