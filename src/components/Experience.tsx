@@ -79,7 +79,7 @@ const Experience = () => {
   
   const volunteerData = [
     {
-      position: "Organizing Committee Member - IPRoMM 2026",
+      position: "Organizing Committee Member - IPRoMM 2026 (AMM)",
       organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       date: "August 2022 - December 2022",
       location: "Dhanbad, Jharkhand, India",
