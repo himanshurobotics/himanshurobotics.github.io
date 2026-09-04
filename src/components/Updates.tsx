@@ -4,19 +4,19 @@ import { Bell, Sparkles } from 'lucide-react';
 const Updates = () => {
   const updates = [
     {
-      tag: "New Publication",
-      date: "September 2025",
-      text: "Paper on Neural Network-based Forward Kinematics for 6-DOF All-Revolute Parallel Manipulators published in the International Journal of Computational Methods (World Scientific)."
-    },
-    {
-      tag: "Conference",
-      date: "July 2025",
-      text: "Presented Adaptive Impedance Control framework for dual 7-DoF humanoid arms at Advances in Robotics (AIR) 2025 (ACM)."
+      tag: "IEEE RO-MAN 2026, Kitakyushu, Japan",
+      date: "August 2026",
+      text: "Presented a paper on Dynamic Uncertainties Modelling Using Physics-Aware Gaussian Process Regression for Impedance Control of Parallel Manipulators"
     },
     {
       tag: "Ongoing Research",
       date: "Current",
       text: "Working on sensorless force control for collaborative manipulation using all-revolute parallel robots, integrating digital twins with physical hardware."
+    },
+    {
+      tag: "Ongoing Research",
+      date: "Current",
+      text: "Fully funded by DRDO (R&DE) - Collaborative dual-arm manipulation in indigenous dual 7-DoF arms humanoid robot."
     }
   ];
 

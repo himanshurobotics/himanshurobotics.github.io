@@ -4,7 +4,14 @@ import { Briefcase, Calendar, MapPin, Users } from 'lucide-react';
 const Experience = () => {
   const experienceData = [
     {
-      position: "Teaching Assistant (TA) NPTEL",
+      position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
+      company: "Industrial Robotics : Theories For Implementation",
+      date: "Jul 2026 - Nov 2026",
+      location: "IIT (ISM) Dhanbad, Jharkhand, India",
+      description: "Made course content, lecture notes, assignments and question papers.",
+      logo: "/lovable-uploads/nptel-logo.png"
+    },{
+      position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
       company: "Collaborative Robots (COBOTS): Theory and Practice",
       date: "Jan 2026 - May 2026",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
@@ -12,7 +19,7 @@ const Experience = () => {
       logo: "/lovable-uploads/nptel-logo.png"
     },
     {
-      position: "Teaching Assistant (TA) NPTEL",
+      position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
       company: "Collaborative Robots (COBOTS): Theory and Practice",
       date: "Jan 2025 - May 2025",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
@@ -20,7 +27,7 @@ const Experience = () => {
       logo: "/lovable-uploads/nptel-logo.png"
     },
     {
-      position: "Teaching Assistant (TA) NPTEL",
+      position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
       company: "Industrial Robotics : Theories For Implementation",
       date: "Jul 2024 - Nov 2024",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
@@ -100,7 +107,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-12">
       <div className="section-container">
-        <h2 className="section-title text-center">Work Experience</h2>
+        <h2 className="section-title text-center">Academic and Professional Engagements</h2>
         
         <div className="max-w-3xl mx-auto">
           {experienceData.map((item, index) => (
