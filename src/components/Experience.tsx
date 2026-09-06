@@ -84,7 +84,7 @@ const Experience = () => {
       date: "August 2022 - December 2022",
       location: "Dhanbad, Jharkhand, India",
       mode: "On-site",
-      description: "Lead the organising committee for the 2nd International & 14th National Conference on Industrial Problems on Machines and Mechanisms (IPRoMM 2022) hosted by the Department of Mechanical Engineering, IIT (ISM) Dhanbad, India."
+      description: "Lead the organising team for the 2nd International & 14th National Conference on Industrial Problems on Machines and Mechanisms (IPRoMM 2022) hosted by the Department of Mechanical Engineering, IIT (ISM) Dhanbad, India."
     },
     {
       position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
