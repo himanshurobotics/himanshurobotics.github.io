@@ -84,7 +84,7 @@ const Experience = () => {
       date: "August 2022 - December 2022",
       location: "Dhanbad, Jharkhand, India",
       mode: "On-site",
-      description: "Lead the organizing committee for the 2nd International Conference on Industrial Robotics and Mechatronics (IPRoMM 2022) held at IIT (ISM) Dhanbad, India."
+      description: "Lead the organizing committee for the 2nd International & 14th National Conference on Industrial Robotics and Mechatronics (IPRoMM 2022) held at IIT (ISM) Dhanbad, India."
     },
     {
       position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
