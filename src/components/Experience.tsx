@@ -79,12 +79,12 @@ const Experience = () => {
   
   const volunteerData = [
     {
-      position: "Organizing Committee Member - IPRoMM 2026 (AMM)",
+      position: "Organizing Committee Member - IPRoMM 2022 (AMM)",
       organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad",
       date: "August 2022 - December 2022",
       location: "Dhanbad, Jharkhand, India",
       mode: "On-site",
-      description: "Lead the organizing committee for the 2nd International Conference on Industrial Robotics and Mechatronics (IPRoMM 2026) held at IIT (ISM) Dhanbad, India."
+      description: "Lead the organizing committee for the 2nd International Conference on Industrial Robotics and Mechatronics (IPRoMM 2022) held at IIT (ISM) Dhanbad, India."
     },
     {
       position: "Event Coordinator - ASME E-Fests Asia Pacific'17",
