@@ -92,7 +92,7 @@ const Experience = () => {
       date: "March 2017",
       location: "Jaipur, Rajasthan, India",
       mode: "On-site",
-      description: "Lead organizer of a main event 'Impromptu Design Challenge'."
+      description: "Lead organiser of a main event 'Impromptu Design Challenge'."
     },
     {
       position: "Class Representative",

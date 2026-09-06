@@ -58,7 +58,7 @@ const Navbar = () => {
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Education', href: '#education', id: 'education' },
     { name: 'Publications', href: '#publications', id: 'publications' },
-    { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Engagements', href: '#experience', id: 'experience' },
     { name: 'Skills', href: '#skills', id: 'skills' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Awards', href: '#awards', id: 'awards' },
