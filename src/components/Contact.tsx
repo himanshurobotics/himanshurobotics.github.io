@@ -140,7 +140,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
             {/* <form action="https://formsubmit.co/hvarshney.robotics@gmail.com" method="POST" className="space-y-6"> */}
               {/* Optional: Disables the default captcha screen for a smoother user experience */}
-              {/* <input type="hidden" name="_captcha" value="false" /> */}
+              <input type="hidden" name="_captcha" value="false" />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -149,7 +149,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name" 
-                    name="name"
+                    name="Name"
                     placeholder="Enter your name" 
                     className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
                     required
@@ -161,7 +161,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email" 
-                    name="email"
+                    name="Email"
                     type="email" 
                     placeholder="Enter your email" 
                     className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
@@ -189,7 +189,7 @@ const Contact = () => {
                 </label>
                 <Textarea 
                   id="message" 
-                  name="message"
+                  name="Message"
                   placeholder="Enter your message" 
                   className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue min-h-[120px]"
                   required
