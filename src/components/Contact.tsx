@@ -6,20 +6,20 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Mail, Phone, Send } from 'lucide-react';
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(formData.get('subject') as string || 'Contact from Portfolio');
-    const body = encodeURIComponent(`
-Name: ${formData.get('name')}
-Email: ${formData.get('email')}
+//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//     const formData = new FormData(e.currentTarget);
+//     const subject = encodeURIComponent(formData.get('subject') as string || 'Contact from Portfolio');
+//     const body = encodeURIComponent(`
+// Name: ${formData.get('name')}
+// Email: ${formData.get('email')}
 
-Message:
-${formData.get('message')}
-    `);
+// Message:
+// ${formData.get('message')}
+//     `);
     
-    window.location.href = `mailto:hvarshney.iitdhn@gmail.com?subject=${subject}&body=${body}`;
-  };
+//     window.location.href = `mailto:hvarshney.robotics@gmail.com?subject=${subject}&body=${body}`;
+//   };
 
   return (
     <section id="contact" className="py-12">
@@ -55,7 +55,7 @@ ${formData.get('message')}
                 <div>
                   <h4 className="text-lg font-medium text-tech-darkblue">Email</h4>
                   <a className="text-gray-700 hover:text-tech-blue">
-                    hvarshney[dot]iitdhn[use your brain for gmail]
+                    hvarshney[dot]robotics[use your brain for gmail]
                   </a>
                 </div>
               </div>
@@ -108,7 +108,11 @@ ${formData.get('message')}
           <div className="bg-white rounded-lg shadow-md p-8">
             <h3 className="text-2xl font-semibold text-tech-darkblue mb-6">Send Me a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
+            <form action="https://formsubmit.co/hvarshney.robotics@gmail.com" method="POST" className="space-y-6">
+              {/* Optional: Disables the default captcha screen for a smoother user experience */}
+              <input type="hidden" name="_captcha" value="false" />
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-gray-700 font-medium">
