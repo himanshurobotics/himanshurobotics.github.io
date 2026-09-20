@@ -1,5 +1,6 @@
 
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -20,6 +21,34 @@ const Contact = () => {
     
 //     window.location.href = `mailto:hvarshney.robotics@gmail.com?subject=${subject}&body=${body}`;
 //   };
+
+  const [isSent, setIsSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Stops the page redirect
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+
+    try {
+      // Notice the /ajax/ added to the URL for background submission
+      await fetch("https://formsubmit.co/ajax/hvarshney.robotics@gmail.com", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      
+      setIsSent(true);
+      form.reset(); // Clears the inputs
+      
+      // Hides the success message after 5 seconds
+      setTimeout(() => setIsSent(false), 5000);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-12">
@@ -108,10 +137,10 @@ const Contact = () => {
           <div className="bg-white rounded-lg shadow-md p-8">
             <h3 className="text-2xl font-semibold text-tech-darkblue mb-6">Send Me a Message</h3>
             
-            {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
-            <form action="https://formsubmit.co/varshney.himanshu111@gmail.com" method="POST" className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* <form action="https://formsubmit.co/hvarshney.robotics@gmail.com" method="POST" className="space-y-6"> */}
               {/* Optional: Disables the default captcha screen for a smoother user experience */}
-              <input type="hidden" name="_captcha" value="false" />
+              {/* <input type="hidden" name="_captcha" value="false" /> */}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -167,10 +196,23 @@ const Contact = () => {
                 />
               </div>
               
-              <Button type="submit" className="w-full bg-tech-blue hover:bg-tech-darkblue">
+              {/* <Button type="submit" className="w-full bg-tech-blue hover:bg-tech-darkblue">
                 <Send className="mr-2 h-4 w-4" />
                 Send Message
-              </Button>
+              </Button> */}
+              <div>
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-tech-blue hover:bg-tech-darkblue">
+                  <Send className="mr-2 h-4 w-4" />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+                
+                {/* The 5-second success message */}
+                {isSent && (
+                  <p className="text-green-600 text-sm text-center mt-3 font-medium animate-in fade-in duration-300">
+                    Message sent successfully!
+                  </p>
+                )}
+              </div>
             </form>
           </div>
         </div>
