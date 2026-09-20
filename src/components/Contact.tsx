@@ -109,7 +109,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-tech-darkblue mb-6">Send Me a Message</h3>
             
             {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
-            <form action="https://formsubmit.co/hvarshney.robotics@gmail.com" method="POST" className="space-y-6">
+            <form action="https://formsubmit.co/varshney.himanshu111@gmail.com" method="POST" className="space-y-6">
               {/* Optional: Disables the default captcha screen for a smoother user experience */}
               <input type="hidden" name="_captcha" value="false" />
 
@@ -147,7 +147,7 @@ const Contact = () => {
                 </label>
                 <Input 
                   id="subject" 
-                  name="subject"
+                  name="_subject"
                   placeholder="Enter subject" 
                   className="border-gray-300 focus:border-tech-blue focus:ring-tech-blue"
                   required
