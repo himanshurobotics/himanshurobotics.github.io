@@ -127,7 +127,7 @@ const Hero = () => {
                   <Cpu className="w-4 h-4" />
                   Senior Research Fellow
                   <br />
-                  @ Indian Institute of Technology Dhanbad
+                  @ Indian Institute of Technology Dhanbad, India
                 </div>
               </div>
               <div className="absolute -top-2 -left-2 bg-tech-blue/10 dark:bg-tech-accent/10 w-full h-full rounded-full animate-pulse-slow border border-tech-blue/20 dark:border-tech-accent/20"></div>
