@@ -8,19 +8,19 @@ import { MapPin, Mail, Phone, Send } from 'lucide-react';
 
 const referencesData = [
     {
-      name: "Prof. Arun Dayal Udai",
+      name: "Prof. Arun Dayal Udai, Associate Professor",
       organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad, Jharkhand, India",
       title: "Doctoral Thesis Supervisor",
       email: "arunudai@iitism.ac.in"
     },
     {
-      name: "Prof. Suril V. Shah",
+      name: "Prof. Suril V. Shah, Professor",
       organization: "Indian Institute of Technology Jodhpur, Rajasthan, India",
       title: "",
       email: "surilshah@iitj.ac.in"
     },
     {
-      name: "Prof. Zafar Alam",
+      name: "Prof. Zafar Alam, Assistant Professor",
       organization: "Indian Institute of Technology (Indian School of Mines) Dhanbad, Jharkhand, India",
       title: "",
       email: "zafar@iitism.ac.in"
