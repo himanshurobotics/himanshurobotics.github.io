@@ -10,7 +10,7 @@ const Education = () => {
       location: "Dhanbad, Jharkhand, India",
       description: "Specialization in the field of Robotics, Mechatronics, Control Systems and Automation.",
       skills: ["Robotics", "Compliant control", "Parallel robots", "Dynamics", "Kinematics"],
-      logo: "/lovable-uploads/iitismlogo.png"
+      logo: "/uploads/iitismlogo.png"
     },
     {
       school: "Netaji Subhas University of Technology (formerly NSIT - University of Delhi)",
@@ -19,7 +19,7 @@ const Education = () => {
       location: "New Delhi, Delhi, India",
       description: "Specialization in the field of Robotics and Mechatronics.",
       skills: ["Robotics", "Serial robots", "Dynamics", "Kinematics", "Fractional order fuzzy control", "Artificial Intelligence"],
-      logo: "/lovable-uploads/NSUT_logo.png"
+      logo: "/uploads/NSUT_logo.png"
     },
     {
       school: "The LNM Institute of Information Technology",
@@ -34,7 +34,7 @@ const Education = () => {
         "Class Representative of Mechanical and Mechatronics Engineering Department",
         "Participated in Torque'14 and got to the final round."
       ],
-      logo: "/lovable-uploads/LNMIIT-Logo.png"
+      logo: "/uploads/LNMIIT-Logo.png"
     },
     {
       school: "Kendriya Vidyalaya No. 2 (Mathura Refinery)",
@@ -42,7 +42,7 @@ const Education = () => {
       date: "2013 - 2014",
       location: "Mathura, Uttar Pradesh, India",
       grade: "90.80%",
-      logo: "/lovable-uploads/kvs-logo.png"
+      logo: "/uploads/kvs-logo.png"
     },
     {
       school: "Kendriya Vidyalaya No. 2 (Mathura Refinery)",
@@ -50,7 +50,7 @@ const Education = () => {
       date: "2011 - 2012",
       location: "Mathura, Uttar Pradesh, India",
       grade: "9.6 CGPA",
-      logo: "/lovable-uploads/kvs-logo.png"
+      logo: "/uploads/kvs-logo.png"
     }
   ];
 

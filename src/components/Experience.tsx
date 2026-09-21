@@ -9,14 +9,14 @@ const Experience = () => {
       date: "Jul 2026 - Nov 2026",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
       description: "Made course content, lecture notes, assignments and question papers.",
-      logo: "/lovable-uploads/nptel-logo.png"
+      logo: "/uploads/nptel-logo.png"
     },{
       position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
       company: "Collaborative Robots (COBOTS): Theory and Practice",
       date: "Jan 2026 - May 2026",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
       description: "Made course content, lecture notes, assignments and question papers.",
-      logo: "/lovable-uploads/nptel-logo.png"
+      logo: "/uploads/nptel-logo.png"
     },
     {
       position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
@@ -24,7 +24,7 @@ const Experience = () => {
       date: "Jan 2025 - May 2025",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
       description: "New course launched. Made course content, simulation and experimental videos, lecture notes, assignments and question papers.",
-      logo: "/lovable-uploads/nptel-logo.png"
+      logo: "/uploads/nptel-logo.png"
     },
     {
       position: "Teaching Assistant (TA) NPTEL, Ministry of Education, Government of India",
@@ -32,7 +32,7 @@ const Experience = () => {
       date: "Jul 2024 - Nov 2024",
       location: "IIT (ISM) Dhanbad, Jharkhand, India",
       description: "Made course content, lecture notes, assignments and question papers.",
-      logo: "/lovable-uploads/nptel-logo.png"
+      logo: "/uploads/nptel-logo.png"
     },
     {
       position: "Senior Research Fellow (SRF)",
@@ -43,7 +43,7 @@ const Experience = () => {
       mode: "On-site",
       description: "Specialization in Kinematics, Dynamics and Control of Serial, Parallel and Hybrid robots.",
       skills: ["Parallel robot", "Dynamics", "Kinematics", "Control"],
-      logo: "/lovable-uploads/iitismlogo.png"
+      logo: "/uploads/iitismlogo.png"
     },
     {
       position: "Junior Research Fellow (JRF)",
@@ -54,7 +54,7 @@ const Experience = () => {
       mode: "On-site",
       description: "Specialization in Kinematics, Dynamics and Control of Serial, Parallel and Hybrid robots.",
       skills: ["Parallel robot", "Dynamics", "Kinematics", "Control"],
-      logo: "/lovable-uploads/iitismlogo.png"
+      logo: "/uploads/iitismlogo.png"
     },
     {
       position: "Teaching Assistant (TA)",
@@ -65,7 +65,7 @@ const Experience = () => {
       mode: "On-site",
       description: "Worked as a Teaching Assistant for 2 years in the Department of Instrumentation and Control Engineering. Specializing in Robotics and control.",
       skills: ["Serial robot", "Control"],
-      logo: "/lovable-uploads/NSUT_logo.png"
+      logo: "/uploads/NSUT_logo.png"
     },
     {
       position: "Summer Internship",
@@ -73,7 +73,7 @@ const Experience = () => {
       date: "May 16th, 2017 - Jun 15th, 2017 · 1 month",
       location: "Mathura, India",
       mode: "On-site",
-      logo: "/lovable-uploads/Indian_Oil_Logo.png"
+      logo: "/uploads/Indian_Oil_Logo.png"
     }
   ];
   

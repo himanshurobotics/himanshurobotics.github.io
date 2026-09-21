@@ -115,7 +115,7 @@ const Hero = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-tech-blue dark:border-tech-accent shadow-2xl relative tech-glow">
                 <div className="absolute inset-0 bg-gradient-to-b from-tech-blue/20 to-transparent"></div>
                 <img 
-                  src="/lovable-uploads/prof_pic.png" 
+                  src="/uploads/prof_pic.png" 
                   alt="Himanshu Varshney - Robotics Engineer" 
                   className="w-full h-full object-cover"
                 />
